@@ -1,0 +1,5 @@
+[user]
+	email = hacdias@gmail.com
+	name = Henrique Dias
+[core]
+	excludesfile = ~/.global.gitignore

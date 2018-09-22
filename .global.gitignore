@@ -1,0 +1,19 @@
+# Editor specific files
+.vscode
+
+# Platform-specific data
+.DS_Store
+Thumbs.db
+
+# Compiled files
+*.o
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.pch
+a.out
+
+# Python
+__pycache__/
