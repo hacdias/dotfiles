@@ -10,6 +10,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source .functions
 
 alias ll='ls -alF'
 alias la='ls -A'
