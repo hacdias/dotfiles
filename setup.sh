@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 cd "$(dirname "${BASH_SOURCE}")"
 
@@ -12,7 +12,6 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE.md" \
 		-avh --no-perms . ~
-	source ~/.zshrc
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
@@ -23,7 +22,7 @@ else
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		doIt
 	fi
+	echo "Don't forget to run 'source ~/.zshrc' to update your zsh settings"
 fi
 
 unset -f doIt
-
