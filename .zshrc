@@ -10,5 +10,5 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source .functions
-source .aliases
+source $HOME/.functions
+source $HOME/.aliases
