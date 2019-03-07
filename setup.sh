@@ -11,7 +11,7 @@ function doIt() {
 		--exclude "setup.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE.md" \
-		-avh --no-perms . ~
+		-avh --no-perms ./dots ~
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
