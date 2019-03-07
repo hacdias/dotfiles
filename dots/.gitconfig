@@ -3,3 +3,5 @@
 	name = Henrique Dias
 [core]
 	excludesfile = ~/.global.gitignore
+[credential]
+	helper = osxkeychain
