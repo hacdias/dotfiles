@@ -12,5 +12,6 @@ brew install coreutils \
 	git-lfs \
 	node \
 	wget
-	
+
+brew install imagemagick --with-webp
 brew cleanup
