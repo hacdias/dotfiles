@@ -19,3 +19,4 @@ brew cleanup
 
 mas lucky todoist
 mas lucky 1password
+mas lucky spark
