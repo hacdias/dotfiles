@@ -11,7 +11,11 @@ brew install coreutils \
 	git \
 	git-lfs \
 	node \
-	wget
+	wget \
+	mas
 
 brew install imagemagick --with-webp
 brew cleanup
+
+mas lucky todoist
+mas lucky 1password
