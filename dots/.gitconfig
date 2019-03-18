@@ -1,6 +1,8 @@
 [user]
 	email = hacdias@gmail.com
 	name = Henrique Dias
+[commit]
+	template = ~/.git-commit-template
 [core]
 	excludesfile = ~/.global.gitignore
 [credential]
