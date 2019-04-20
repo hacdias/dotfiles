@@ -10,9 +10,14 @@ brew install coreutils \
 	openssh \
 	git \
 	git-lfs \
+	ffmpeg \
+	gcc \
 	node \
 	wget \
-	mas
+	mas \
+	go \
+	hugo \
+	ufraw
 
 brew install imagemagick --with-webp
 brew cleanup
@@ -20,3 +25,4 @@ brew cleanup
 mas lucky todoist
 mas lucky 1password
 mas lucky spark
+mas lucky lungo
