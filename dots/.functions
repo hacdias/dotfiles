@@ -5,6 +5,16 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
+# Cd code
+function cdc() {
+	cd ~/Code
+}
+
+# Cd técnico
+function cdt() {
+	cd ~/Code/hacdias/@tecnico
+}
+
 # Create a data URL from a file
 function dataurl() {
 	local mimeType=$(file -b --mime-type "$1");
