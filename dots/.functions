@@ -10,9 +10,14 @@ function cdc() {
 	cd ~/Code
 }
 
-# Cd técnico
+# Cd Técnico
 function cdt() {
 	cd ~/Code/hacdias/@tecnico
+}
+
+# Rename all lifies to YYYY-MM-DD
+function renameLifies() {
+	find . -iname '*jpeg' -exec jhead -n%Y-%m-%d {} +
 }
 
 # Create a data URL from a file
