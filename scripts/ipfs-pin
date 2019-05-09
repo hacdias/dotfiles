@@ -4,7 +4,7 @@ set -euo pipefail
 
 if [ $# -eq 0 ]; then
   echo "usage: ipfs-pin <csv-file>"
-  return
+  exit
 fi
 
 IFS=','
