@@ -1,0 +1,18 @@
+#/usr/bin/env bash
+
+set -euo pipefail
+
+if [ $# -eq 0 ]; then
+  echo "usage: ipfs-pin <csv-file>"
+  return
+fi
+
+IFS=','
+in=$1
+
+cat $in | while read path comment; do
+  cid=$(ipfs resolve $path)
+  ipfs pin add $cid
+done
+
+ipfs pin verify
