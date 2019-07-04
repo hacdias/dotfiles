@@ -10,9 +10,13 @@ fi
 IFS=','
 in=$1
 
+ipfs files stat /pins && ipfs files rm /pins --force -r || true
+ipfs files mkdir /pins
+
 cat $in | while read path comment; do
   cid=$(ipfs resolve $path)
-  ipfs pin add $cid
+  ipfs pin add --progress $cid
+  ipfs files cp $cid "/pins/$comment"
 done
 
 ipfs pin verify
