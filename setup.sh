@@ -12,6 +12,11 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE.md" \
 		-avh --no-perms ./dots/ ~/
+
+	rsync --exclude ".git/" \
+		--exclude ".DS_Store" \
+		--exclude ".osx" \
+		-avh --no-perms ./scripts/ ~/.scripts/
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
