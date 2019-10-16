@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
@@ -7,16 +5,16 @@ function mkd() {
 
 # Cd code
 function cdc() {
-	cd ~/Code
+	cd ~/Code/"$1"
 }
 
 # Cd Técnico
 function cdt() {
-	cd ~/Code/hacdias/@tecnico
+	cd ~/Code/hacdias/@tecnico/"$1"
 }
 
 # Rename all lifies to YYYY-MM-DD
-function renameLifies() {
+function rename_lifies() {
 	find . -iname '*jpeg' -exec jhead -n%Y-%m-%d {} +
 }
 
@@ -49,4 +47,3 @@ function o() {
 		open "$@";
 	fi;
 }
-

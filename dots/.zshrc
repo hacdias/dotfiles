@@ -8,8 +8,7 @@ ZSH_THEME="funny"
 
 plugins=(
   git
+  hacdias
 )
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.functions
-source $HOME/.aliases
