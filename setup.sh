@@ -5,16 +5,11 @@ cd "$(dirname "${BASH_SOURCE}")"
 git pull origin master
 
 function doIt() {
-	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
+	rsync --exclude ".DS_Store" \
 		--exclude ".osx" \
-		--exclude "setup.sh" \
-		--exclude "README.md" \
-		--exclude "LICENSE.md" \
 		-avh --no-perms ./dots/ ~/
 
-	rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
+	rsync	--exclude ".DS_Store" \
 		--exclude ".osx" \
 		-avh --no-perms ./scripts/ ~/.scripts/
 }
