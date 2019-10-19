@@ -13,11 +13,6 @@ function cdt() {
 	cd ~/Code/hacdias/@tecnico/"$1"
 }
 
-# Rename all lifies to YYYY-MM-DD
-function rename_lifies() {
-	find . -iname '*jpeg' -exec jhead -n%Y-%m-%d {} +
-}
-
 # Create a data URL from a file
 function dataurl() {
 	local mimeType=$(file -b --mime-type "$1");
