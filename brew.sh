@@ -26,3 +26,5 @@ mas lucky todoist
 mas lucky 1password
 mas lucky spark
 mas lucky lungo
+mas lucky slack
+mas lucky telegram
