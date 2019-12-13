@@ -13,6 +13,7 @@ ZSH_THEME="funny"
 plugins=(
   git
   hacdias
+  vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
