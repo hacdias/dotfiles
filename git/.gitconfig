@@ -2,17 +2,22 @@
 	email = hacdias@gmail.com
 	name = Henrique Dias
 	signingkey = AE957E3A2905B55A6950E76244545566F552F631
+
 [commit]
 	template = ~/.git-commit-template
 	gpgsign = true
+
 [core]
 	excludesfile = ~/.global.gitignore
+
 [credential]
 	helper = osxkeychain
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
 [gpg]
 	program = gpg
