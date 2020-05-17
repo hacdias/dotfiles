@@ -57,6 +57,7 @@ mas lucky "Affinity Photo"
 stow git
 stow vim
 stow vscode
+stow gpg
 stow zsh --adopt # force adoption because oh-my-zsh already introduces some
 
 # Install some Go tools
