@@ -1,0 +1,7 @@
+add_newline = false
+
+[line_break]
+disabled = true
+
+[character]
+use_symbol_for_status = true

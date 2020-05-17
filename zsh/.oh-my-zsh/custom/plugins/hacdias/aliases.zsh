@@ -1,5 +1,5 @@
-alias ll='ls -alF'
-alias la='ls -A'
+alias ll='ls -lh'
+alias la='ls -lAh'
 alias l='ls -CF'
 
 alias open-ports="lsof -Pan -iTCP -sTCP:LISTEN"

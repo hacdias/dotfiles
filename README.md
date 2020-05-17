@@ -1,8 +1,9 @@
 # hacdias' configuration files
 
-Before running anything, check [`setup.sh`](setup.sh) to check if there's anything that needs
-to be changed or not installed on the machine.
+The following steps show how to run the setup scripts for the first time on a new machine. Please check every file to see if it looks good before running it! Things might've changed.
 
-- `git clone https://github.com/hacdias/dotfiles ~/dotfiles`
-- `~/dotfiles/setup.sh`
-- `source ~/.zshrc`
+1. `git clone https://github.com/hacdias/dotfiles ~/dotfiles`
+2. Run `cd ~/dotfiles/setup`
+3. Run `./setup.sh`
+4. Wait...
+5. Restart terminal and see if everything is OK!

@@ -1,34 +1,28 @@
-export ZSH=$HOME/.oh-my-zsh
-export PATH=$HOME/.scripts:$PATH
-
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+export LANG="en_US.UTF-8"
+export LC_ALL=${LANG}
 export EDITOR=`which vim`
 
-export GPG_TTY=$(tty)
+# PATH and PATH-like configurations
+export GOPATH=${HOME}/go
+export PATH=${HOME}/bin:${PATH}
+export PATH=${PATH}:${GOPATH}/bin
 
-# Ensure we use gpg-agent instead of ssh-agent for SSH!
+# Configure GPG and SSH over GPG
+export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-ZSH_THEME="funny"
+# Configure Oh My Zsh https://ohmyz.sh/
+export ZSH="${HOME}/.oh-my-zsh"
+ZSH_THEME="" # Do not load any zsh theme as I'm using starship!
 
 plugins=(
-  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
   hacdias
 )
 
-export PATH=$PATH:$HOME/go/bin
-export PATH="$PATH:$HOME/.npm-global/bin"
+source ${ZSH}/oh-my-zsh.sh
 
-# export NODE_PATH="$NODE_PATH:$HOME/.npm-global/lib/node_modules"
-source $ZSH/oh-my-zsh.sh
-source $HOME/.cargo/env
-
-# THIS IS HUGELY SLOW. DONT LIKE IT.
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# Load Starship https://starship.rs/
+eval "$(starship init zsh)"
