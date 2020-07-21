@@ -20,6 +20,8 @@ brew install go
 brew install hugo
 brew install ufraw
 brew install imagemagick
+brew install caddy
+brew install watch
 
 # Shell and prompt
 brew install zsh
