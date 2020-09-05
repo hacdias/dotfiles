@@ -22,6 +22,8 @@ brew install ufraw
 brew install imagemagick
 brew install caddy
 brew install watch
+brew install bat
+brew install bandwhich
 
 # Shell and prompt
 brew install zsh
@@ -29,3 +31,9 @@ brew install starship # https://starship.rs
 
 # Cleanup Cellar
 brew cleanup
+
+# Testground tooling
+brew install helm
+brew install kops
+brew install terraform
+echo "Install Amazon CLI: https://aws.amazon.com/cli/"
