@@ -24,6 +24,8 @@ brew install caddy
 brew install watch
 brew install bat
 brew install bandwhich
+brew install wakeonlan
+brew install wireguard-tools
 
 # Shell and prompt
 brew install zsh
