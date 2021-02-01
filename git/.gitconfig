@@ -21,5 +21,9 @@
 
 [gpg]
 	program = gpg
+
 [pull]
 	rebase = false
+
+[alias]
+	cake = log --date=format:'%d %b %Y' --diff-filter=A --name-only --pretty='%n%C(yellow bold)🎂️ %ad%Creset by (%C(blue bold)%h%Creset)'
