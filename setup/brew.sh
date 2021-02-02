@@ -26,6 +26,7 @@ brew install bat
 brew install bandwhich
 brew install wakeonlan
 brew install wireguard-tools
+brew install pyenv
 
 # Shell and prompt
 brew install zsh

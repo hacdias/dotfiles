@@ -6,6 +6,7 @@ export EDITOR=`which vim`
 export GOPATH=${HOME}/go
 export PATH=${HOME}/bin:${PATH}
 export PATH=${PATH}:${GOPATH}/bin
+export PATH="$HOME/.pyenv/bin:$PATH"
 
 # Configure GPG and SSH over GPG
 export GPG_TTY=$(tty)
@@ -23,6 +24,10 @@ plugins=(
 )
 
 source ${ZSH}/oh-my-zsh.sh
+
+# Load Pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # Load Starship https://starship.rs/
 eval "$(starship init zsh)"

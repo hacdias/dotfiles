@@ -10,7 +10,7 @@ function cdc() {
 
 # Cd Técnico
 function cdt() {
-	cd ~/Code/hacdias/@tecnico/"$1"
+	cd ~/Code/@tue/"$1"
 }
 
 # Create a data URL from a file
