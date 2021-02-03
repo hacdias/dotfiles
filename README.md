@@ -1,9 +1,14 @@
-# hacdias' configuration files
+# @hacdias' dotfiles and scripts
 
-The following steps show how to run the setup scripts for the first time on a new machine. Please check every file to see if it looks good before running it! Things might've changed.
+This repository contains my dotfiles and scripts. Easy to synchronize and setup on a new machine for the first time. A little reminder to myself: please take a look at the scripts before running them and check if I want all packages that are installed.
 
-1. `git clone https://github.com/hacdias/dotfiles`
-2. Run `cd dotfiles`
-3. Run `./install.sh`
-4. Wait...
-5. Restart terminal and see if everything is OK!
+Quick setup:
+
+```shell
+$ git clone https://github.com/hacdias/dotfiles
+$ cd dotfiles
+$ ./install.sh
+$ source ~/.zshrc
+```
+
+Most likely some error might've just occurred. I will try to fix it.
