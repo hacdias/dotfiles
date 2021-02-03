@@ -1,0 +1,23 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "private": true,
+  "bin": {
+    "cdn-upload": "./cdn-upload.js",
+    "clean-dnslink-pinata": "./clean-dnslink-pinata.js",
+    "get-pinata-pins": "./get-pinata-pins.js"
+  },
+  "scripts": {
+    "lint": "standard **/*.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fs-extra": "^9.1.0",
+    "got": "^11.8.1",
+    "meow": "^9.0.0",
+    "sharp": "^0.27.1"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
