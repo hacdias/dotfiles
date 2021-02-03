@@ -1,8 +1,8 @@
-#/usr/bin/env bash
+#/usr/bin/env zsh
 
 set -euo pipefail
 
-NVM_VERSION=0.35.3
+NVM_VERSION=0.37.2
 
 # 1. Install NVM: https://github.com/nvm-sh/nvm
 #    Homebrew NVM version is broken.

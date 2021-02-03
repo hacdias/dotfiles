@@ -28,15 +28,9 @@ brew install wakeonlan
 brew install wireguard-tools
 brew install pyenv
 
-# Shell and prompt
+# Shell and prompt (https://starship.rs)
 brew install zsh
-brew install starship # https://starship.rs
+brew install starship
 
 # Cleanup Cellar
 brew cleanup
-
-# Testground tooling
-brew install helm
-brew install kops
-brew install terraform
-echo "Install Amazon CLI: https://aws.amazon.com/cli/"
