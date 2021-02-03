@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+(git add -A && git -c user.name='Mr. Automatic' -c user.email=automatic@hacdias.com commit --no-gpg-sign -m "$(date)") || echo "No changes to commit."
+git pull
+git push

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SRC="/Users/henriquedias/Library/Mobile Documents/iCloud~is~workflow~my~workflows/Documents/Project Lifie"
+DST="/Users/henriquedias/Pictures/Project Lifie"
+
+cd "$SRC"
+
+# Rename all pictures to YYYY-MM-DD
+mogrify -format jpg *.png
+rm -rf *.png
+mv "$SRC"/*.jpg "$DST/"

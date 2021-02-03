@@ -4,7 +4,7 @@ set -euo pipefail
 
 echo "⛈  Symlinking shell scripts to ~/bin"
 mkdir -p ~/bin
-stow -d ./scripts -t ~/bin -D shell
+stow -d ./scripts -t ~/bin shell
 
 echo "🔌 Symlinking JS scripts"
 cd scripts/js
