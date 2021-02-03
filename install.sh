@@ -39,10 +39,7 @@ if yn "Sync dotfiles?"; then
 fi
 
 if yn "Install other tools and scripts?"; then
-  # TODO
-
-  # Install some Go tools
-  go install github.com/StackExchange/dnscontrol
+  ./scripts.sh
 fi
 
 if yn "Install node and nvm?"; then
