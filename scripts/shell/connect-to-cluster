@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -uo pipefail
+
+# connect-to-cluster.sh
+#
+# Connects the ipfs daemon to the large storage cluster peers and preloader nodes.
+#
+
+cat <<EOF | xargs -n1 ipfs swarm connect
+/dns4/cluster0.fsn.dwebops.pub/udp/4001/quic/p2p/QmUEMvxS2e7iDrereVYc5SWPauXPyNwxcy9BXZrC1QTcHE
+/dns4/cluster1.fsn.dwebops.pub/udp/4001/quic/p2p/QmNSYxZAiJHeLdkBg38roksAR9So7Y5eojks1yjEcUtZ7i
+/dns4/cluster2.fsn.dwebops.pub/udp/4001/quic/p2p/QmUd6zHcbkbcs7SMxwLs48qZVX3vpcM8errYS7xEczwRMA
+/dns4/cluster3.fsn.dwebops.pub/udp/4001/quic/p2p/QmbVWZQhCGrS7DhgLqWbgvdmKN7JueKCREVanfnVpgyq8x
+/dns4/cluster4.fsn.dwebops.pub/udp/4001/quic/p2p/QmdnXwLrC8p1ueiq2Qya8joNvk3TVVDAut7PrikmZwubtR
+/dns4/node0.preload.ipfs.io/tcp/4001/p2p/QmZMxNdpMkewiVZLMRxaNxUeZpDUb34pWjZ1kZvsd16Zic
+/dns4/node1.preload.ipfs.io/tcp/4001/p2p/Qmbut9Ywz9YEDrz8ySBSgWyJk41Uvm2QJPhwDJzJyGFsD6
+EOF
