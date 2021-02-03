@@ -16,7 +16,6 @@ stowu git
 stowu gpg
 stowu starship
 stowu vim
-stowu vscode
 stowu zsh
 
 echo "Please run:\n\tsource ~/.zshrc"
