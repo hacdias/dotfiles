@@ -7,6 +7,7 @@ export GOPATH=${HOME}/go
 export PATH=${HOME}/bin:${PATH}
 export PATH=${PATH}:${GOPATH}/bin
 export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Configure GPG and SSH over GPG
 export GPG_TTY=$(tty)
