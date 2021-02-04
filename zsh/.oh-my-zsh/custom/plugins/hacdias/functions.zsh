@@ -8,7 +8,7 @@ function cdc() {
 	cd ~/Code/"$1"
 }
 
-# Cd Técnico
+# Cd TU/e
 function cdt() {
 	cd ~/Code/@tue/"$1"
 }
