@@ -24,17 +24,7 @@ const typeOpts = {
 }
 
 const presets = {
-  books: {
-    jpeg: [
-      [100, 150],
-      [200, 300]
-    ],
-    webp: [
-      [100, 150],
-      [200, 300]
-    ]
-  },
-  default: {
+  images: {
     jpeg: [
       [250],
       [500],
@@ -51,9 +41,8 @@ const presets = {
 }
 
 const presetsPath = {
-  books: 'books',
-  photos: 'photos',
-  default: 'uploads'
+  images: 'i',
+  default: 'u'
 }
 
 const cli = meow(`
@@ -72,22 +61,27 @@ const cli = meow(`
 
   Options
     --preset, -p  photo preset to use
+    --keep-name
 `, {
   flags: {
     preset: {
       type: 'string',
       alias: 'p',
       default: 'default'
+    },
+    keepName: {
+      type: 'boolean',
+      default: false
     }
   }
 })
 
-function normalizeExtension (ext) {
+function normalizeExtension(ext) {
   if (ext === '.jpg') return '.jpeg'
   return ext
 }
 
-;(async () => {
+; (async () => {
   const preset = presets[cli.flags.preset] || presets.default
   const path = presetsPath[cli.flags.preset] || presetsPath.default
   const files = cli.input
@@ -108,17 +102,26 @@ function normalizeExtension (ext) {
     const ext = extname(file)
     const filename = basename(file, ext)
 
-    if (!['.jpg', '.jpeg'].includes(ext)) {
-      const hash = sha256(buff)
+    if (!['.jpg', '.jpeg'].includes(ext) || cli.flags.preset === 'default') {
+      const hash = cli.flags.keepName ? filename : sha256(buff)
       console.log(`\tUploading to ${path}/${hash}${normalizeExtension(ext)}`)
       console.log('\t', await upload(buff, `${path}/${hash}${normalizeExtension(ext)}`))
       continue
     }
 
-    const fBuff = await sharp(buff).jpeg({
+    const img = sharp(buff)
+    const metadata = await img.metadata()
+
+    let jpeg = await img.jpeg({
       quality: 100,
       progressive: true
-    }).resize(3000).toBuffer()
+    })
+
+    if (metadata.width > 3000) {
+      jpeg = await jpeg.resize(300)
+    }
+
+    const fBuff = await jpeg.toBuffer()
 
     console.log(`\tUploading to ${path}/${filename}${normalizeExtension(ext)}`)
     console.log('\t', await upload(fBuff, `${path}/${filename}${normalizeExtension(ext)}`))
@@ -134,11 +137,11 @@ function normalizeExtension (ext) {
   }
 })()
 
-function sha256 (data) {
+function sha256(data) {
   return crypto.createHash('sha256').update(data).digest('hex')
 }
 
-async function upload (data, filename) {
+async function upload(data, filename) {
   if (!filename.startsWith('/')) {
     filename = '/' + filename
   }
