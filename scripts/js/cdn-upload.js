@@ -118,7 +118,7 @@ function normalizeExtension(ext) {
     })
 
     if (metadata.width > 3000) {
-      jpeg = await jpeg.resize(300)
+      jpeg = await jpeg.resize(3000)
     }
 
     const fBuff = await jpeg.toBuffer()
