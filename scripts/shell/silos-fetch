@@ -14,9 +14,6 @@ node ./bin.js trakt sync || telegram "Error while fetching Trakt data"
 echo ">>> SWARM DATA FETCHER"
 node ./bin.js swarm sync || telegram "Error while fetching Swarm data"
 
-echo ">>> GOODREADS DATA FETCHER"
-node ./bin.js goodreads sync || telegram "Error while fetching GoodReads data"
-
 echo ">>> LASTFM DATA FETCHER"
 node ./bin.js lastfm sync || telegram "Error while fetching LastFM data"
 
