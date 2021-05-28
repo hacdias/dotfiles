@@ -11,3 +11,4 @@ cd "$SRC"
 mogrify -format jpg *.png
 rm -rf *.png
 mv "$SRC"/*.jpg "$DST/"
+# find . -iname '*jpg' -exec jhead -n%Y-%m-%d_%H-%M-%S {} +
