@@ -9,6 +9,10 @@ export PATH=${PATH}:${GOPATH}/bin
 export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# University temporary stuff
+export SPARK_HOME=/usr/local/Cellar/apache-spark/3.1.1/libexec
+export PATH="$SPARK_HOME/bin/:$PATH"
+
 # Configure GPG and SSH over GPG
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
