@@ -13,6 +13,3 @@ alias tg='testground'
 alias tgd='testground daemon'
 alias tgr='testground run'
 alias tgb='testground build'
-
-# Uni Stuff
-alias cdmsce='cd "~/Google Drive/MSCE"'

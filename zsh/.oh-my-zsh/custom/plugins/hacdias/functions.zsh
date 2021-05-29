@@ -3,15 +3,26 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
-# Cd code
-function cdc() {
-	cd ~/Code/"$1"
-}
+# Define some cd aliases and their completions.
+typeset -A cd_aliases
+cd_aliases=(
+	[cdc]="$HOME/Code"
+	[cdd]="$HOME/Documents"
+	[cdmsce]="$HOME/Google Drive/MSCE"
+	[cdt]="$HOME/Code/@tue"
+)
 
-# Cd TU/e
-function cdt() {
-	cd ~/Code/@tue/"$1"
-}
+for k in "${(@k)cd_aliases}"; do
+	function $k() {
+		cd "$cd_aliases[$0]/$1"
+	}
+
+	function _$k() {
+		((CURRENT == 2)) && _files -/ -W $cd_aliases[${0:1}]
+	}
+
+	compdef _$k $k
+done
 
 # Create a data URL from a file
 function dataurl() {
