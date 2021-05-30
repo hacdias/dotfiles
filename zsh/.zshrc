@@ -13,7 +13,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export SPARK_HOME=/usr/local/Cellar/apache-spark/3.1.1/libexec
 export PATH="$SPARK_HOME/bin/:$PATH"
 
-# Configure GPG and SSH over GPG
+# Configure GPG and SSH over GPG. When OpenSSL with FIDO2 is more
+# established, stop using this.
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
