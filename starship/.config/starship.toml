@@ -4,4 +4,4 @@ add_newline = false
 disabled = true
 
 [character]
-use_symbol_for_status = true
+error_symbol = "[✖](bold red)"
