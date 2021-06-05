@@ -36,7 +36,8 @@ source ${ZSH}/oh-my-zsh.sh
 # Load Pyenv
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+eval "$(PYENV_VIRTUALENV_DISABLE_PROMPT=1 pyenv virtualenv-init -)"
 
 # Load Starship https://starship.rs/
 eval "$(starship init zsh)"
