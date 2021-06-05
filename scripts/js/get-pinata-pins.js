@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 'use strict'
 
-const home = require('os').homedir()
-require('dotenv').config({ path: home + '/scripts/.env' })
 const got = require('got')
 
 const keys = {

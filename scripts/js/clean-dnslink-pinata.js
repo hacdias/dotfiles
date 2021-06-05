@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 'use strict'
 
-const home = require('os').homedir()
 const got = require('got')
-require('dotenv').config({ path: home + '/scripts/.env' })
 
 const keys = {
   pinata_api_key: process.env.PINATA_API_KEY,

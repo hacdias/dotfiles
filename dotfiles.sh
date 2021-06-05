@@ -11,6 +11,9 @@ function stowu () {
 # otherwise stow will complain.
 rm -rf ~/.zshrc
 
+# Make sure the tokens file exists.
+touch ~/.tokens
+
 # Stow the dotfiles.
 stowu git
 stowu gpg

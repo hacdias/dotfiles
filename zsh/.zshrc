@@ -41,3 +41,8 @@ eval "$(PYENV_VIRTUALENV_DISABLE_PROMPT=1 pyenv virtualenv-init -)"
 
 # Load Starship https://starship.rs/
 eval "$(starship init zsh)"
+
+# Load up my tokens
+set -a
+source ~/.tokens
+set +a
