@@ -39,9 +39,7 @@ for (const name of names) {
 
   for (const { ipfs_pin_hash: hash } of filtered) {
     console.log(`✅ Unpinning ${hash} for ${name}`)
-    await got.delete(`https://api.pinata.cloud/pinning/unpin/${hash}`, {
-      headers: keys
-    })
+    await got.delete(`https://api.pinata.cloud/pinning/unpin/${hash}`, { headers })
   }
 }
 
