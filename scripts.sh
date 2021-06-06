@@ -8,8 +8,8 @@ stow -d ./scripts -t ~/bin shell
 
 echo "🔌 Symlinking JS scripts"
 cd scripts/js
-npm unlink
-npm link
+npm unlink .
+npm link .
 
 echo "🔨 Installing miscellaneous tools"
 go install github.com/StackExchange/dnscontrol

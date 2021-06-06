@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 'use strict'
 
-const got = require('got')
-const meow = require('meow')
-const crypto = require('crypto')
-const { extname } = require('path')
-const fs = require('fs-extra')
-const sharp = require('sharp')
-const { basename } = require('path')
+import { put } from 'got'
+import meow from 'meow'
+import { createHash } from 'crypto'
+import { extname, basename } from 'path'
+import { readFile } from 'fs-extra'
+import sharp from 'sharp'
 
 const config = {
   zone: process.env.BUNNY_ZONE,
@@ -73,9 +72,28 @@ const cli = meow(`
   }
 })
 
-function normalizeExtension(ext) {
+function normalizeExtension (ext) {
   if (ext === '.jpg') return '.jpeg'
   return ext
+}
+
+function sha256 (data) {
+  return createHash('sha256').update(data).digest('hex')
+}
+
+async function upload (data, filename) {
+  if (!filename.startsWith('/')) {
+    filename = '/' + filename
+  }
+
+  await put(`https://storage.bunnycdn.com/${config.zone}${filename}`, {
+    headers: {
+      AccessKey: config.key
+    },
+    body: data
+  })
+
+  return 'https://cdn.hacdias.com' + filename
 }
 
 ; (async () => {
@@ -95,7 +113,7 @@ function normalizeExtension(ext) {
 
   for (const file of files) {
     console.log(file)
-    const buff = await fs.readFile(file)
+    const buff = await readFile(file)
     const ext = extname(file)
     const filename = basename(file, ext)
 
@@ -133,22 +151,3 @@ function normalizeExtension(ext) {
     }
   }
 })()
-
-function sha256(data) {
-  return crypto.createHash('sha256').update(data).digest('hex')
-}
-
-async function upload(data, filename) {
-  if (!filename.startsWith('/')) {
-    filename = '/' + filename
-  }
-
-  await got.put(`https://storage.bunnycdn.com/${config.zone}${filename}`, {
-    headers: {
-      AccessKey: config.key
-    },
-    body: data
-  })
-
-  return 'https://cdn.hacdias.com' + filename
-}
