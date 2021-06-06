@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Shows local branches that are gone on the first remote available (usually "origin").
+
+remote=`git remote | head -1`
+
+git remote prune "$remote"
+git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}'

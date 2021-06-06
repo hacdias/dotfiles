@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Deletes local branches that are gone on the remote "origin"
+
+remote=`git remote | head -1`
+
+git remote prune "$remote"
+git branch -vv | grep "$remote/.*: gone]" | awk '{print $1}' | xargs git branch -D
