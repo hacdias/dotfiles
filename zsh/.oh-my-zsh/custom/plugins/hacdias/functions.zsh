@@ -53,3 +53,9 @@ function o() {
 		open "$@";
 	fi;
 }
+
+function load_fstar() {
+	export PATH="$HOME/z3/bin:$PATH"
+	eval $(opam env)
+	fstar.exe --version
+}
