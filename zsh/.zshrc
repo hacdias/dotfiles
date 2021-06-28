@@ -11,10 +11,6 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# University temporary stuff
-export SPARK_HOME=/usr/local/Cellar/apache-spark/3.1.2/libexec
-export PATH="$SPARK_HOME/bin/:$PATH"
-
 # Configure GPG and SSH over GPG. When OpenSSL with FIDO2 is more
 # established, stop using this.
 export GPG_TTY=$(tty)
