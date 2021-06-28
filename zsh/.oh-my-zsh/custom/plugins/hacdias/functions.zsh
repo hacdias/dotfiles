@@ -55,6 +55,7 @@ function o() {
 }
 
 function load_fstar() {
+	# Cumbersome installation: https://github.com/FStarLang/FStar/issues/2330#issuecomment-869392216
 	export PATH="$HOME/z3/bin:$PATH"
 	eval $(opam env)
 	fstar.exe --version
