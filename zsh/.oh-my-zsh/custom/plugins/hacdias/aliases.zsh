@@ -14,3 +14,6 @@ alias tgd='testground daemon'
 alias tgr='testground run'
 alias tgb='testground build'
 alias k='kubectl'
+
+# University
+alias fstar='fstar.exe'
