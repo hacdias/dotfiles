@@ -7,7 +7,6 @@ var THOR_IP = '135.181.87.57'
 
 D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
-  A('go', THOR_IP, CF_PROXY_ON),
   A('miniflux', THOR_IP, CF_PROXY_ON),
   A('xkcd', THOR_IP, CF_PROXY_ON),
   A('notes', THOR_IP, CF_PROXY_ON),
@@ -25,8 +24,8 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   TXT('@', 'v=spf1 include:mailgun.org include:spf.improvmx.com ~all'),
   TXT('krs._domainkey', 'k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9ZfGRGj9sn0GnSq6lZTZyfgkujmDdBkLEXgeJ8xbloPSX6EHUfieHkrTW9wpFm8JGVC1SONTIrs3NDuyaIR/c62IicylIQIlFqJ0hKnfXmRq1SEu6m7WvbnaJ12x605oC4RP0fa0/do7QOnpgAQDnZPDoRuRqc+p2OJQPY8+YtwIDAQAB'),
   TXT('_dmarc', 'v=DMARC1; p=none;'),
-  TXT('_dnslink', 'dnslink=/ipfs/Qmaj3dwj8xVKZyQUvzs7Wc5PVYWvVNHjTK7i9UnPDzoakG'),
-  TXT('_dnslink.xkcd', 'dnslink=/ipfs/QmckVSZcHtBBNnWCox8YcJSukm4aTnpVDToZKBdCmXHE2s')
+  TXT('_dnslink', 'dnslink=/ipfs/QmUKyv8Qmm3xX8P7ESSxhB9swnNxosHs7GGP98TX1Susd4'),
+  TXT('_dnslink.xkcd', 'dnslink=/ipfs/QmeS8k8VW3wnW4RMcFE7ufibUgT5vWkuxgkEdum9YRmyV9')
 )
 
 D('hacdia.sh', REG_NONE, DnsProvider(CLOUDFLARE),
