@@ -35,6 +35,9 @@ eval "$(pyenv init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 eval "$(PYENV_VIRTUALENV_DISABLE_PROMPT=1 pyenv virtualenv-init -)"
 
+# Load OCaml
+eval $(opam env)
+
 # Load Starship https://starship.rs/
 eval "$(starship init zsh)"
 

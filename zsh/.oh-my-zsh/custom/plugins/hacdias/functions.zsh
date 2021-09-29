@@ -8,8 +8,7 @@ typeset -A cd_aliases
 cd_aliases=(
 	[cdc]="$HOME/Code"
 	[cdd]="$HOME/Documents"
-	[cdmsce]="$HOME/Google Drive/MSCE"
-	[cdt]="$HOME/Code/@tue"
+	[cdt]="$HOME/Google Drive/MSCE"
 )
 
 for k in "${(@k)cd_aliases}"; do
@@ -52,11 +51,4 @@ function o() {
 	else
 		open "$@";
 	fi;
-}
-
-function load_fstar() {
-	# Cumbersome installation: https://github.com/FStarLang/FStar/issues/2330#issuecomment-869392216
-	export PATH="$HOME/z3/bin:$PATH"
-	eval $(opam env)
-	fstar --version
 }
