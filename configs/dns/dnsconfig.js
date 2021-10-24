@@ -8,7 +8,6 @@ var THOR_IP = '135.181.87.57'
 D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
   A('miniflux', THOR_IP, CF_PROXY_ON),
-  A('go', THOR_IP, CF_PROXY_ON),
   A('xkcd', THOR_IP, CF_PROXY_ON),
   A('notes', THOR_IP, CF_PROXY_ON),
   CNAME('www', 'hacdias.com.', CF_PROXY_ON),
