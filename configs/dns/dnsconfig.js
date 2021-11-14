@@ -9,6 +9,7 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
   A('miniflux', THOR_IP, CF_PROXY_ON),
   A('xkcd', THOR_IP, CF_PROXY_ON),
+  A('dash', THOR_IP, CF_PROXY_ON),
   CNAME('www', 'hacdias.com.', CF_PROXY_ON),
   CNAME('status', 'stats.uptimerobot.com.', CF_PROXY_ON),
   CNAME('cdn', 'hacdias.b-cdn.net.', CF_PROXY_OFF),
@@ -23,8 +24,7 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   TXT('@', 'v=spf1 include:mailgun.org include:spf.improvmx.com ~all'),
   TXT('krs._domainkey', 'k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9ZfGRGj9sn0GnSq6lZTZyfgkujmDdBkLEXgeJ8xbloPSX6EHUfieHkrTW9wpFm8JGVC1SONTIrs3NDuyaIR/c62IicylIQIlFqJ0hKnfXmRq1SEu6m7WvbnaJ12x605oC4RP0fa0/do7QOnpgAQDnZPDoRuRqc+p2OJQPY8+YtwIDAQAB'),
   TXT('_dmarc', 'v=DMARC1; p=none;'),
-  TXT('_dnslink', 'dnslink=/ipfs/QmWADWrbLF7gPDxBNacj4K5cSBZvz2tb7G7uKEvgMWduZ1'),
-  TXT('_dnslink.xkcd', 'dnslink=/ipfs/QmV4V1xkgosbHBL1eq2p4GSr95174Y41H88gaoqQX5L6xo')
+  TXT('_dnslink.xkcd', 'dnslink=/ipfs/QmesmdTyjvGiE4H1G7kUkKmrs9sZ6pBLrDdPCZd5YpddZN')
 )
 
 D('hacdia.sh', REG_NONE, DnsProvider(CLOUDFLARE),
