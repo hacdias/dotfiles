@@ -23,7 +23,7 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   TXT('@', 'v=spf1 include:mailgun.org include:spf.improvmx.com ~all'),
   TXT('krs._domainkey', 'k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9ZfGRGj9sn0GnSq6lZTZyfgkujmDdBkLEXgeJ8xbloPSX6EHUfieHkrTW9wpFm8JGVC1SONTIrs3NDuyaIR/c62IicylIQIlFqJ0hKnfXmRq1SEu6m7WvbnaJ12x605oC4RP0fa0/do7QOnpgAQDnZPDoRuRqc+p2OJQPY8+YtwIDAQAB'),
   TXT('_dmarc', 'v=DMARC1; p=none;'),
-  TXT('_dnslink.xkcd', 'dnslink=/ipfs/QmcRimZs7fJszL3Afh1yGgicawcy5njJz9Eh8ub1zx3sP7')
+  TXT('_dnslink.xkcd', 'dnslink=/ipfs/QmUaUmRWCfnyAdYFqckr4ArtmhAuzJSM6216SHb2emfz2B')
 )
 
 D('hacdia.sh', REG_NONE, DnsProvider(CLOUDFLARE),
@@ -37,9 +37,6 @@ D('h4c.pt', REG_NONE, DnsProvider(CLOUDFLARE),
 D('henriquedias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
   CNAME('www', 'henriquedias.com.', CF_PROXY_ON),
-  MX('@', 10, 'mx1.improvmx.com.'),
-  MX('@', 20, 'mx2.improvmx.com.'),
   TXT('_keybase', 'keybase-site-verification=0ajL5eM3gy5vO10gNlmGqhFvVuxvqOuRYDQIFWFCDaw'),
-  TXT('@', 'google-site-verification=jIEoWFXm813Y2EAD4GzvNHrf1uOWJmsWZlsF9E2UgsM'),
-  TXT('@', 'v=spf1 include:spf.improvmx.com ~all')
+  TXT('@', 'google-site-verification=jIEoWFXm813Y2EAD4GzvNHrf1uOWJmsWZlsF9E2UgsM')
 )
