@@ -45,7 +45,3 @@ fi
 if yn "Install node and nvm?"; then
   ./node.sh
 fi
-
-if yn "Install testground tools?"; then
-  ./brew-testgrond.sh
-fi

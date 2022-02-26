@@ -1,0 +1,42 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "ngrok/ngrok"
+brew "caddy"
+brew "coreutils"
+brew "dnscontrol"
+brew "ffmpeg"
+brew "findutils"
+brew "git"
+brew "git-lfs"
+brew "gnupg"
+brew "go"
+brew "hugo"
+brew "imagemagick"
+brew "ipfs"
+brew "mas"
+brew "moreutils"
+brew "openssh"
+brew "pinentry-mac"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "starship"
+brew "stow"
+brew "watch"
+brew "wget"
+brew "zsh"
+cask "discord"
+cask "font-fira-code"
+cask "iterm2"
+cask "ngrok"
+cask "spotify"
+mas "1Password 7", id: 1333542190
+mas "Actions", id: 1586435171
+mas "Lungo", id: 1263070803
+mas "MakePass", id: 1450989464
+mas "Pandan", id: 1569600264
+mas "Slack", id: 803453959
+mas "Spark", id: 1176895641
+mas "Telegram", id: 747648890
+mas "Todoist", id: 585829637

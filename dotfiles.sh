@@ -20,5 +20,6 @@ stowu gpg
 stowu starship
 stowu vim
 stowu zsh
+stowu mac
 
 echo "Please run:\n\tsource ~/.zshrc"
