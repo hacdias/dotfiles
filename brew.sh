@@ -27,6 +27,8 @@ brew install bandwhich
 brew install wakeonlan
 brew install wireguard-tools
 brew install pyenv
+brew install pyenv-virtualenv
+brew install stow
 
 # Shell and prompt (https://starship.rs)
 brew install zsh

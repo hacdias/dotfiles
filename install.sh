@@ -17,7 +17,7 @@ if yn "Install homebrew?"; then
   # Install brew if not installed already
   # Homepage: https://brew.sh/
   if ! command -v brew; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
 fi
 
@@ -30,8 +30,8 @@ fi
 if yn "Install oh-my-zsh and make zsh the default shell?"; then
   ./oh-my-zsh.sh
   # Make zsh the default shell
-  sudo sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
-  chsh -s /usr/local/bin/zsh
+  sudo sh -c 'echo "/opt/homebrew/bin/zsh" >> /etc/shells'
+  chsh -s /opt/homebrew/bin/zsh
 fi
 
 if yn "Sync dotfiles?"; then
