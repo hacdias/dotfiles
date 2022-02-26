@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-NVM_VERSION=0.37.2
+NVM_VERSION=0.39.1
 
 # 1. Install NVM: https://github.com/nvm-sh/nvm
 #    Homebrew NVM version is broken.
