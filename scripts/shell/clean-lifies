@@ -8,7 +8,5 @@ DST="/Users/henriquedias/Pictures/Project Lifie"
 cd "$SRC"
 
 # Rename all pictures to YYYY-MM-DD
-mogrify -format jpg *.png
-rm -rf *.png
-mv "$SRC"/*.jpg "$DST/"
-# find . -iname '*jpg' -exec jhead -n%Y-%m-%d_%H-%M-%S {} +
+mv "$SRC"/*.jpeg "$DST/"
+find . -iname '*jpeg' -exec jhead -n%Y-%m-%d_%H-%M-%S {} +
