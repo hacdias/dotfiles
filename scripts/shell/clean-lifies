@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-SRC="/Users/henriquedias/Library/Mobile Documents/iCloud~is~workflow~my~workflows/Documents/Project Lifie"
-DST="/Users/henriquedias/Pictures/Project Lifie"
+SRC="/Users/hacdias/Library/Mobile Documents/iCloud~is~workflow~my~workflows/Documents/Project Lifie"
+DST="/Users/hacdias/Pictures/Project Lifie"
 
 cd "$SRC"
 
