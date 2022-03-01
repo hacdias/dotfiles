@@ -8,3 +8,7 @@ error_symbol = "[✖](bold red)"
 
 [aws]
 disabled = true
+
+[nodejs]
+symbol = "🧩 "
+
