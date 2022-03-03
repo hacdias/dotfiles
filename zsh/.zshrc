@@ -29,11 +29,11 @@ plugins=(
 
 source ${ZSH}/oh-my-zsh.sh
 
-# Load Pyenv
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-eval "$(PYENV_VIRTUALENV_DISABLE_PROMPT=1 pyenv virtualenv-init -)"
+# Load Pyenv (brew install pyenv pyenv-virtualenv)
+# eval "$(pyenv init --path)"
+# eval "$(pyenv init -)"
+# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+# eval "$(PYENV_VIRTUALENV_DISABLE_PROMPT=1 pyenv virtualenv-init -)"
 
 # Load OCaml
 # eval $(opam env)
@@ -45,3 +45,19 @@ eval "$(starship init zsh)"
 set -a
 source ~/.tokens
 set +a
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/Caskroom/miniforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniforge/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniforge/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
