@@ -21,7 +21,7 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   TXT('@', 'v=spf1 include:spf.improvmx.com ~all'),
   TXT('krs._domainkey', 'k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9ZfGRGj9sn0GnSq6lZTZyfgkujmDdBkLEXgeJ8xbloPSX6EHUfieHkrTW9wpFm8JGVC1SONTIrs3NDuyaIR/c62IicylIQIlFqJ0hKnfXmRq1SEu6m7WvbnaJ12x605oC4RP0fa0/do7QOnpgAQDnZPDoRuRqc+p2OJQPY8+YtwIDAQAB'),
   TXT('_dmarc', 'v=DMARC1; p=none;'),
-  TXT('_dnslink.xkcd', 'dnslink=/ipfs/QmUaUmRWCfnyAdYFqckr4ArtmhAuzJSM6216SHb2emfz2B')
+  TXT('_dnslink.xkcd', 'dnslink=/ipfs/QmeNZ3SGmZKzXhewRLz13sWWjkYw2QTMcRKuKo6TFVmQM4')
 )
 
 D('hacdia.sh', REG_NONE, DnsProvider(CLOUDFLARE),
