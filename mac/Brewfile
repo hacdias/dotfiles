@@ -29,10 +29,11 @@ cask "discord"
 cask "docker"
 cask "font-fira-code"
 cask "ganache"
+cask "gog-galaxy"
 cask "google-chrome"
-cask "google-drive"
 cask "iterm2"
 cask "macfuse"
+cask "minecraft"
 cask "miniforge"
 cask "ngrok"
 cask "pdf-expert"
@@ -45,8 +46,10 @@ cask "vlc"
 cask "whatsapp"
 mas "1Password 7", id: 1333542190
 mas "Actions", id: 1586435171
+mas "Affinity Photo", id: 824183456
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
+mas "One Thing", id: 1604176982
 mas "Pandan", id: 1569600264
 mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
