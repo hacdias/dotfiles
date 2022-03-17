@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 'use strict'
 
-import { put } from 'got'
+import got from 'got'
 import meow from 'meow'
 import { createHash } from 'crypto'
 import { extname, basename } from 'path'
-import { readFile } from 'fs-extra'
+import fs from 'fs-extra'
 import sharp from 'sharp'
 
 const config = {
@@ -59,6 +59,7 @@ const cli = meow(`
     --preset, -p  photo preset to use
     --keep-name
 `, {
+  importMeta: import.meta,
   flags: {
     preset: {
       type: 'string',
@@ -86,7 +87,7 @@ async function upload (data, filename) {
     filename = '/' + filename
   }
 
-  await put(`https://storage.bunnycdn.com/${config.zone}${filename}`, {
+  await got.put(`https://storage.bunnycdn.com/${config.zone}${filename}`, {
     headers: {
       AccessKey: config.key
     },
@@ -113,7 +114,7 @@ async function upload (data, filename) {
 
   for (const file of files) {
     console.log(file)
-    const buff = await readFile(file)
+    const buff = await fs.readFile(file)
     const ext = extname(file)
     const filename = basename(file, ext)
 
