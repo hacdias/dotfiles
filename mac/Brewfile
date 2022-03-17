@@ -6,6 +6,7 @@ tap "ngrok/ngrok"
 brew "caddy"
 brew "coreutils"
 brew "dnscontrol"
+brew "ethereum"
 brew "ffmpeg"
 brew "findutils"
 brew "git"
@@ -36,6 +37,7 @@ cask "macfuse"
 cask "minecraft"
 cask "miniforge"
 cask "ngrok"
+cask "obsidian"
 cask "pdf-expert"
 cask "scroll-reverser"
 cask "spotify"
@@ -49,9 +51,9 @@ mas "Actions", id: 1586435171
 mas "Affinity Photo", id: 824183456
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
+mas "Microsoft Word", id: 462054704
 mas "One Thing", id: 1604176982
 mas "Pandan", id: 1569600264
 mas "Slack", id: 803453959
-mas "Spark", id: 1176895641
 mas "Telegram", id: 747648890
 mas "Todoist", id: 585829637
