@@ -15,7 +15,7 @@
     "fs-extra": "^10.0.0",
     "got": "^11.8.2",
     "meow": "^10.0.0",
-    "sharp": "^0.28.3"
+    "sharp": "^0.30.5"
   },
   "devDependencies": {
     "standard": "^16.0.3"
