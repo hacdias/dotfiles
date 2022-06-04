@@ -11,11 +11,15 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Configure GPG and SSH over GPG. When OpenSSL with FIDO2 is more
-# established, stop using this.
+# Configure GPG
 export GPG_TTY=$(tty)
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
+
+# Start GPG over SSH
+# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+# gpgconf --launch gpg-agent
+
+# Start SSH agent
+eval "$(ssh-agent -s)" &>/dev/null
 
 # Configure Oh My Zsh https://ohmyz.sh/
 export ZSH="$HOME/.oh-my-zsh"
