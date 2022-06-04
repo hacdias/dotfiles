@@ -4,11 +4,9 @@ export EDITOR=`which vim`
 
 # PATH and PATH-like configurations
 export GOPATH="$HOME/go"
-export PYENV_ROOT="$HOME/.pyenv"
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Configure GPG
@@ -32,12 +30,6 @@ plugins=(
 )
 
 source ${ZSH}/oh-my-zsh.sh
-
-# Load Pyenv (brew install pyenv pyenv-virtualenv)
-# eval "$(pyenv init --path)"
-# eval "$(pyenv init -)"
-# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-# eval "$(PYENV_VIRTUALENV_DISABLE_PROMPT=1 pyenv virtualenv-init -)"
 
 # Load OCaml
 # eval $(opam env)
