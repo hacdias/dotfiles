@@ -31,9 +31,6 @@ plugins=(
 
 source ${ZSH}/oh-my-zsh.sh
 
-# Load OCaml
-# eval $(opam env)
-
 # Load Starship https://starship.rs/
 eval "$(starship init zsh)"
 
