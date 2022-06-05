@@ -10,6 +10,7 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   A('miniflux', THOR_IP, CF_PROXY_ON),
   A('xkcd', THOR_IP, CF_PROXY_ON),
   A('ownyourtrakt', THOR_IP, CF_PROXY_ON),
+  A('matrix', THOR_IP, CF_PROXY_ON),
   CNAME('www', 'hacdias.com.', CF_PROXY_ON),
   CNAME('cdn', 'hacdias.b-cdn.net.', CF_PROXY_OFF),
   CNAME('key1._domainkey', 'key1.hacdias.com._domainkey.migadu.com.', CF_PROXY_OFF),
@@ -23,7 +24,7 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   TXT('@', 'v=spf1 include:spf.migadu.com -all'),
   TXT('krs._domainkey', 'k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9ZfGRGj9sn0GnSq6lZTZyfgkujmDdBkLEXgeJ8xbloPSX6EHUfieHkrTW9wpFm8JGVC1SONTIrs3NDuyaIR/c62IicylIQIlFqJ0hKnfXmRq1SEu6m7WvbnaJ12x605oC4RP0fa0/do7QOnpgAQDnZPDoRuRqc+p2OJQPY8+YtwIDAQAB'),
   TXT('_dmarc', 'v=DMARC1; p=quarantine;'),
-  TXT('_dnslink.xkcd', 'dnslink=/ipfs/QmeNZ3SGmZKzXhewRLz13sWWjkYw2QTMcRKuKo6TFVmQM4')
+  TXT('_dnslink.xkcd', 'dnslink=/ipfs/QmNWeYN4dYDnbz8mLtRn4ToC9bWgnf9D8xSfyL6wvodqt4')
 )
 
 D('hacdia.sh', REG_NONE, DnsProvider(CLOUDFLARE),
