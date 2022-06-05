@@ -3,7 +3,9 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "ngrok/ngrok"
+brew "age"
 brew "caddy"
+brew "python@3.9"
 brew "coreutils"
 brew "dnscontrol"
 brew "ethereum"
@@ -17,6 +19,7 @@ brew "hugo"
 brew "imagemagick"
 brew "ipfs"
 brew "jhead"
+brew "jq"
 brew "mas"
 brew "moreutils"
 brew "openssh"
@@ -39,6 +42,7 @@ cask "miniforge"
 cask "ngrok"
 cask "obsidian"
 cask "pdf-expert"
+cask "pgadmin4"
 cask "scroll-reverser"
 cask "spotify"
 cask "transmission"
@@ -48,10 +52,13 @@ cask "vlc"
 cask "whatsapp"
 mas "1Password 7", id: 1333542190
 mas "Actions", id: 1586435171
+mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
+mas "Black Out", id: 1319884285
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
 mas "Microsoft Word", id: 462054704
+mas "miele-lxiv", id: 988332475
 mas "One Thing", id: 1604176982
 mas "Pandan", id: 1569600264
 mas "Slack", id: 803453959
