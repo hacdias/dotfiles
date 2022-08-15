@@ -1,7 +1,5 @@
-// If you're asking if I should have this public, I don't see why not.
-// All DNS records are public.
-var REG_NONE = NewRegistrar('none', 'NONE')
-var CLOUDFLARE = NewDnsProvider('cloudflare', 'CLOUDFLAREAPI')
+var REG_NONE = NewRegistrar('none')
+var CLOUDFLARE = NewDnsProvider('cloudflare')
 
 var THOR_IP = '135.181.87.57'
 
