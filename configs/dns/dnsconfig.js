@@ -41,3 +41,7 @@ D('henriquedias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   TXT('_keybase', 'keybase-site-verification=0ajL5eM3gy5vO10gNlmGqhFvVuxvqOuRYDQIFWFCDaw'),
   TXT('@', 'google-site-verification=jIEoWFXm813Y2EAD4GzvNHrf1uOWJmsWZlsF9E2UgsM')
 )
+
+D('nata.cafe', REG_NONE, DnsProvider(CLOUDFLARE),
+  A('@', THOR_IP, CF_PROXY_ON)
+)
