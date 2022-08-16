@@ -5,10 +5,15 @@ tap "homebrew/core"
 tap "ngrok/ngrok"
 brew "age"
 brew "caddy"
+brew "pkg-config"
 brew "python@3.9"
 brew "coreutils"
 brew "dnscontrol"
 brew "ethereum"
+brew "gnutls"
+brew "libass"
+brew "libbluray"
+brew "tesseract"
 brew "ffmpeg"
 brew "findutils"
 brew "git"
@@ -26,6 +31,7 @@ brew "openssh"
 brew "pinentry-mac"
 brew "starship"
 brew "stow"
+brew "vips"
 brew "watch"
 brew "wget"
 brew "zsh"
@@ -36,6 +42,7 @@ cask "ganache"
 cask "gog-galaxy"
 cask "google-chrome"
 cask "iterm2"
+cask "lagrange"
 cask "macfuse"
 cask "minecraft"
 cask "miniforge"
@@ -50,17 +57,19 @@ cask "veracrypt"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
-mas "1Password 7", id: 1333542190
 mas "Actions", id: 1586435171
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Black Out", id: 1319884285
+mas "iA Writer", id: 775737590
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "miele-lxiv", id: 988332475
 mas "One Thing", id: 1604176982
 mas "Pandan", id: 1569600264
 mas "Slack", id: 803453959
+mas "Tailscale", id: 1475387142
 mas "Telegram", id: 747648890
-mas "Todoist", id: 585829637
