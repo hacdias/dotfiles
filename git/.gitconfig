@@ -4,7 +4,6 @@
 	signingkey = AE957E3A2905B55A6950E76244545566F552F631
 
 [commit]
-	template = ~/.git-commit-template
 	gpgsign = true
 
 [core]
@@ -25,8 +24,8 @@
 [pull]
 	rebase = false
 
-[alias]
-	cake = log --date=format:'%d %b %Y' --diff-filter=A --name-only --pretty='%n%C(yellow bold)🎂️ %ad%Creset by (%C(blue bold)%h%Creset)'
-
 [init]
 	defaultBranch = main
+
+[push]
+	autoSetupRemote = true
