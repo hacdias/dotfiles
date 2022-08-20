@@ -42,6 +42,7 @@ D('henriquedias.com', REG_NONE, DnsProvider(CLOUDFLARE),
 
 D('nata.cafe', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
+  A('www', THOR_IP, CF_PROXY_ON),
   A('nitter', THOR_IP, CF_PROXY_ON),
   A('miniflux', THOR_IP, CF_PROXY_ON)
 )
