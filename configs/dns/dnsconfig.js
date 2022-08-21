@@ -5,7 +5,6 @@ var THOR_IP = '135.181.87.57'
 
 D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
-  A('miniflux', THOR_IP, CF_PROXY_ON),
   A('xkcd', THOR_IP, CF_PROXY_ON),
   A('ownyourtrakt', THOR_IP, CF_PROXY_ON),
   A('git', THOR_IP, CF_PROXY_ON),
@@ -22,7 +21,7 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   TXT('@', 'v=spf1 include:spf.migadu.com -all'),
   TXT('krs._domainkey', 'k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9ZfGRGj9sn0GnSq6lZTZyfgkujmDdBkLEXgeJ8xbloPSX6EHUfieHkrTW9wpFm8JGVC1SONTIrs3NDuyaIR/c62IicylIQIlFqJ0hKnfXmRq1SEu6m7WvbnaJ12x605oC4RP0fa0/do7QOnpgAQDnZPDoRuRqc+p2OJQPY8+YtwIDAQAB'),
   TXT('_dmarc', 'v=DMARC1; p=quarantine;'),
-  TXT('_dnslink.xkcd', 'dnslink=/ipfs/bafybeifuckkxpsjuiiqogpw6nbde3gr3deho66abunwlgkuzhv5ul4s74i')
+  TXT('_dnslink.xkcd', 'dnslink=/ipfs/bafybeiekyvxcshtvokxkap2hsf2dwjbvomv4layhrsnynajgvhnajxbwb4')
 )
 
 D('hacdia.sh', REG_NONE, DnsProvider(CLOUDFLARE),
