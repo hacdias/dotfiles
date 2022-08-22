@@ -8,6 +8,7 @@ alias fresh-install="rm -r node_modules && rm package-lock.json && npm install"
 alias ftypes="find . -type f | awk -F'.' '{print \$NF}' | sort| uniq -c | sort -g"
 alias swap_yubikey="killall gpg-agent && rm -rf ~/.gnupg/private-keys-v1.d/ && gpg --card-status"
 alias py='python'
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 # Testground
 alias tg='testground'
