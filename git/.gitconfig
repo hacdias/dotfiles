@@ -1,7 +1,7 @@
 [user]
 	email = hacdias@gmail.com
 	name = Henrique Dias
-	signingkey = AE957E3A2905B55A6950E76244545566F552F631
+	signingkey = ~/.ssh/ed25519-sk-yubi-676
 
 [commit]
 	gpgsign = true
@@ -19,7 +19,8 @@
 	required = true
 
 [gpg]
-	program = gpg
+	format = ssh
+	# program = gpg
 
 [pull]
 	rebase = false
