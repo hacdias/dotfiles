@@ -3,12 +3,12 @@ FROM golang:1.19-buster
 ENV CADDY_VERSION v2.5.2
 
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest; \
-  xcaddy build $CADDY_VERSION --with github.com/caddy-dns/cloudflare; \
+  xcaddy build $CADDY_VERSION --with github.com/caddy-dns/cloudflare --with github.com/aksdb/caddy-cgi/v2; \
   mv caddy /usr/bin/caddy
 
 FROM alpine:3.16
 
-RUN apk add --no-cache ca-certificates mailcap
+RUN apk add --no-cache ca-certificates mailcap perl
 
 COPY --from=0 /usr/bin/caddy /usr/bin/caddy
 
