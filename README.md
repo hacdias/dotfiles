@@ -12,3 +12,9 @@ $ source ~/.zshrc
 ```
 
 Most likely some error might've just occurred. I will try to fix it.
+
+## macOS
+
+Some apps not available through HomeBrew or the App Store:
+
+- [TinkerTool](https://www.bresink.com/osx/0TinkerTool/download.php)
