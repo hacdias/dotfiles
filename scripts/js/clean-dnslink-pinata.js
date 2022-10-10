@@ -16,7 +16,7 @@ const { body } = await got('https://api.pinata.cloud/data/pinList?status=pinned&
 
 const items = body.rows
   .filter(r => !r.date_unpinned)
-  .filter(r => r.metadata.name.startsWith('_dnslink.'))
+  .filter(r => r.metadata.name && r.metadata.name.startsWith('_dnslink.'))
   .sort((a, b) => new Date(a.date_pinned) - new Date(b.date_pinned))
 
 const names = items.reduce((curr, item) => {
