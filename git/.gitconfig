@@ -32,6 +32,7 @@
 	autoSetupRemote = true
 
 [alias]
-	main = ! git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
-	cm = ! git checkout $(git main)
-	um = ! git rebase $(git main)
+	main 	= ! git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
+	co	 	= checkout
+	com 	= ! git checkout $(git main)
+	rmain	= ! git rebase $(git main)
