@@ -10,3 +10,4 @@ alias swap_yubikey="killall gpg-agent && rm -rf ~/.gnupg/private-keys-v1.d/ && g
 alias py='python'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias g='git'
+alias delete-empty='find . -type d -empty -delete'
