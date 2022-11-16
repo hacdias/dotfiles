@@ -9,5 +9,7 @@ alias ftypes="find . -type f | awk -F'.' '{print \$NF}' | sort| uniq -c | sort -
 alias swap_yubikey="killall gpg-agent && rm -rf ~/.gnupg/private-keys-v1.d/ && gpg --card-status"
 alias py='python'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
-alias g='git'
 alias delete-empty='find . -type d -empty -delete'
+
+alias g='git'
+compdef g='git'
