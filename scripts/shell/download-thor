@@ -1,0 +1,15 @@
+#/usr/bin/env bash
+
+set -euo pipefail
+
+export RESTIC_PASSWORD=
+export RESTIC_REPOSITORY=
+export B2_ACCOUNT_ID=
+export B2_ACCOUNT_KEY=
+
+snapshot=$(restic snapshots --latest 1 --json | jq -r .[0].short_id)
+temp_dir=$(mktemp -d)
+restic restore $snapshot --target $temp_dir/backup
+tar cvfz thor-$snapshot.tar.gz -C $temp_dir .
+rm -rf $temp_dir
+restic unlock
