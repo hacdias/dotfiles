@@ -10,3 +10,12 @@ echo "🔌 Symlinking JS scripts"
 cd scripts/js
 npm unlink .
 npm link .
+cd ../../
+
+echo "🐹 Installing Go scripts"
+for dir in scripts/go/*/; do
+  cd $dir
+  go mod download
+  go install
+  cd ../../
+done

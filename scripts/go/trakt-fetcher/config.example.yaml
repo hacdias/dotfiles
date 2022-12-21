@@ -1,0 +1,10 @@
+# Client ID and Client Secret (https://trakt.tv/oauth/applications)
+client: ClientID
+secret: ClientSecret
+
+# Path to a JSON file where the application will
+# store the authentication token upon login.
+token: path/to/token.json
+
+# Output directory to store the history files.
+output: path/to/history/
