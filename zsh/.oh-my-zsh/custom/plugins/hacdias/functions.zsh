@@ -56,3 +56,15 @@ function o() {
 function pins_ls() {
 	ipfs pin remote ls --status=queued,pinning,pinned,failed --service=$1 | sort
 }
+
+function get_dns() {
+	networksetup -getdnsservers Wi-Fi
+}
+
+function clear_dns() {
+	networksetup -setdnsservers Wi-Fi "Empty"
+}
+
+function cloudflare_dns() {
+	networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
+}
