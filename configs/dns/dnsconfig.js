@@ -8,6 +8,7 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   A('www', THOR_IP, CF_PROXY_ON),
   A('xkcd', THOR_IP, CF_PROXY_ON),
   A('git', THOR_IP, CF_PROXY_ON),
+  A('go', THOR_IP, CF_PROXY_ON),
   CNAME('cdn', 'hacdias.b-cdn.net.', CF_PROXY_OFF),
   CNAME('key1._domainkey', 'key1.hacdias.com._domainkey.migadu.com.', CF_PROXY_OFF),
   CNAME('key2._domainkey', 'key2.hacdias.com._domainkey.migadu.com.', CF_PROXY_OFF),
@@ -25,7 +26,8 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
 
 D('hacdia.sh', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
-  A('www', THOR_IP, CF_PROXY_ON)
+  A('www', THOR_IP, CF_PROXY_ON),
+  A('ipfs', THOR_IP, CF_PROXY_ON)
 )
 
 D('h4c.pt', REG_NONE, DnsProvider(CLOUDFLARE),
