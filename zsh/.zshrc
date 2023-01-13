@@ -8,6 +8,7 @@ export GOPATH="$HOME/go"
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/Library/Python/3.10/bin:$PATH"
 
 # Configure GPG
 export GPG_TTY=$(tty)
