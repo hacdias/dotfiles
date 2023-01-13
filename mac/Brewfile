@@ -8,6 +8,7 @@ brew "caddy"
 brew "pkg-config"
 brew "python@3.9"
 brew "coreutils"
+brew "deno"
 brew "dnscontrol"
 brew "gnutls"
 brew "libass"
@@ -15,29 +16,36 @@ brew "libbluray"
 brew "tesseract"
 brew "ffmpeg"
 brew "findutils"
+brew "gh"
 brew "git"
 brew "git-lfs"
 brew "gnupg"
 brew "go"
 brew "hugo"
+brew "libheif"
+brew "libraw"
 brew "imagemagick"
 brew "ipfs"
 brew "jhead"
 brew "jq"
-brew "markdownlint-cli"
+brew "python@3.10"
+brew "libfido2"
 brew "mas"
 brew "moreutils"
 brew "neovim"
 brew "openssh"
+brew "openssl@3"
 brew "pinentry-mac"
+brew "poppler"
 brew "restic"
 brew "starship"
 brew "stow"
-brew "vips"
+brew "telnet"
 brew "w3m"
 brew "watch"
 brew "wget"
 brew "zsh"
+cask "cutter"
 cask "discord"
 cask "docker"
 cask "font-fira-code"
@@ -61,19 +69,20 @@ cask "veracrypt"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
+cask "wireshark"
 mas "Actions", id: 1586435171
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Black Out", id: 1319884285
+mas "DigiDoc4 Client", id: 1370791134
 mas "Exporter", id: 1099120373
 mas "iA Writer", id: 775737590
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Word", id: 462054704
 mas "miele-lxiv", id: 988332475
 mas "Pandan", id: 1569600264
+mas "ProtobufViewer", id: 1165908879
 mas "Slack", id: 803453959
 mas "Tailscale", id: 1475387142
 mas "Telegram", id: 747648890
+mas "Web eID", id: 1576665083
