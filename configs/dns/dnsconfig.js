@@ -27,7 +27,9 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
 D('hacdia.sh', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
   A('www', THOR_IP, CF_PROXY_ON),
-  A('ipfs', THOR_IP, CF_PROXY_ON)
+  A('ipfs', THOR_IP, CF_PROXY_ON),
+  A('xkcd', THOR_IP, CF_PROXY_ON),
+  IGNORE_NAME('_dnslink.xkcd')
 )
 
 D('h4c.pt', REG_NONE, DnsProvider(CLOUDFLARE),
