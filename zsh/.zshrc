@@ -30,7 +30,10 @@ plugins=(
   hacdias
 )
 
-source ${ZSH}/oh-my-zsh.sh
+setopt HIST_IGNORE_SPACE
+
+[ -f  ${ZSH}/oh-my-zsh.sh ] && source ${ZSH}/oh-my-zsh.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Load Starship https://starship.rs/
 eval "$(starship init zsh)"
