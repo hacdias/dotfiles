@@ -28,6 +28,7 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   hacdias
+  git
 )
 
 setopt HIST_IGNORE_SPACE
