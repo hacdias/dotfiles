@@ -8,7 +8,6 @@ typeset -A cd_aliases
 cd_aliases=(
 	[cdc]="$HOME/Code"
 	[cdd]="$HOME/Documents"
-	[cdt]="$HOME/Google Drive/MSCE"
 )
 
 for k in "${(@k)cd_aliases}"; do
