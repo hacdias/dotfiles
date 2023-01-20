@@ -8,3 +8,4 @@ alias ftypes="find . -type f | awk -F'.' '{print \$NF}' | sort| uniq -c | sort -
 alias swap_yubikey="killall gpg-agent && rm -rf ~/.gnupg/private-keys-v1.d/ && gpg --card-status"
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias delete_empty='find . -type d -empty -delete'
+alias cat='bat --paging=never'
