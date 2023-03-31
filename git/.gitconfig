@@ -20,7 +20,6 @@
 
 [gpg]
 	format = ssh
-	# program = gpg
 
 [pull]
 	rebase = false
