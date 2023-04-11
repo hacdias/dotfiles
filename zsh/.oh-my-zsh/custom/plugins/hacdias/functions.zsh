@@ -71,3 +71,17 @@ function cloudflare_dns() {
 function fdiff() {
 	git diff --name-only --relative --diff-filter=d | xargs bat --diff
 }
+
+function traceparent() {
+	# see spec: https://www.w3.org/TR/trace-context
+	# version-format   = trace-id "-" parent-id "-" trace-flags
+	# trace-id         = 32HEXDIGLC  ; 16 bytes array identifier. All zeroes forbidden
+	# parent-id        = 16HEXDIGLC  ; 8 bytes array identifier. All zeroes forbidden
+	# trace-flags      = 2HEXDIGLC   ; 8 bit flags. Currently, only one bit is used. See below for detail
+	version="00" # fixed in spec at 00
+	trace_id="$(cat /dev/urandom | gtr -dc 'a-f0-9' | fold -w 32 | head -n 1)"
+	parent_id="00$(cat /dev/urandom | gtr -dc 'a-f0-9' | fold -w 14 | head -n 1)"
+	tace_flag="01"   # sampled
+	trace_parent="$version-$trace_id-$parent_id-$tace_flag"
+	echo $trace_parent
+}
