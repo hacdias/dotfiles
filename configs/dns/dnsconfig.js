@@ -9,7 +9,6 @@ D('hacdias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   A('git', THOR_IP, CF_PROXY_ON),
   A('go', THOR_IP, CF_PROXY_ON),
   CNAME('cdn', 'hacdias.b-cdn.net.', CF_PROXY_OFF),
-  TXT('@', 'keybase-site-verification=3OP1gzrj1B90Z-TuNZe5piO-5jp3UP7OCAEEG7yiPWE'),
   TXT('@', 'google-site-verification=lg_VxNseU4oOVkGPbTQjGa0oHQbNyq-gI8Xf_gF5IA8'),
   TXT('_atproto', 'did=did:plc:xsx3bphrwkgeo3qnfjhzmdra'),
   // Migadu
@@ -44,7 +43,6 @@ D('h4c.pt', REG_NONE, DnsProvider(CLOUDFLARE),
 D('henriquedias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
   A('www', THOR_IP, CF_PROXY_ON),
-  TXT('_keybase', 'keybase-site-verification=0ajL5eM3gy5vO10gNlmGqhFvVuxvqOuRYDQIFWFCDaw'),
   TXT('@', 'google-site-verification=jIEoWFXm813Y2EAD4GzvNHrf1uOWJmsWZlsF9E2UgsM')
 )
 
