@@ -5,7 +5,7 @@ alias l='ls -CF'
 alias open_ports="lsof -Pan -iTCP -sTCP:LISTEN"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ftypes="find . -type f | awk -F'.' '{print \$NF}' | sort| uniq -c | sort -g"
-alias swap_yubikey="killall gpg-agent && rm -rf ~/.gnupg/private-keys-v1.d/ && gpg --card-status"
+alias swap_yubikey="gpg-connect-agent "scd serialno" "learn --force" /bye"
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias delete_empty='find . -type d -empty -delete'
 alias jaeger='docker run --rm -it --name jaeger \
@@ -20,3 +20,4 @@ alias jaeger='docker run --rm -it --name jaeger \
   -p 14250:14250 \
   -p 9411:9411 \
   jaegertracing/all-in-one'
+alias tidy_all='gfind -type f -name "go.mod" | while read p; do cd $(dirname $p); echo $p; go mod tidy; cd -; done'
