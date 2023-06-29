@@ -31,7 +31,6 @@ brew "hwloc"
 brew "libheif"
 brew "libraw"
 brew "imagemagick"
-brew "ipfs"
 brew "jhead"
 brew "jq"
 brew "python@3.10"
@@ -47,7 +46,7 @@ brew "neovim"
 brew "netcat"
 brew "nmap"
 brew "openssh"
-brew "openssl@3"
+brew "openssl@3", link: false
 brew "pinentry-mac"
 brew "poppler"
 brew "protobuf"
@@ -99,6 +98,7 @@ mas "iA Writer", id: 775737590
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
 mas "miele-lxiv", id: 988332475
+mas "Parcel", id: 639968404
 mas "ProtobufViewer", id: 1165908879
 mas "Slack", id: 803453959
 mas "Tailscale", id: 1475387142
@@ -117,6 +117,7 @@ vscode "golang.go"
 vscode "GrapeCity.gc-excelviewer"
 vscode "IBM.output-colorizer"
 vscode "jock.svg"
+vscode "matthewpi.caddyfile-support"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
@@ -128,3 +129,4 @@ vscode "rust-lang.rust-analyzer"
 vscode "standard.vscode-standard"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "yzhang.markdown-all-in-one"
+vscode "zxh404.vscode-proto3"
