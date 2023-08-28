@@ -1,7 +1,5 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "ngrok/ngrok"
 brew "age"
@@ -33,7 +31,6 @@ brew "libraw"
 brew "imagemagick"
 brew "jhead"
 brew "jq"
-brew "python@3.10"
 brew "libfido2"
 brew "mpfr"
 brew "libmpc"
@@ -46,13 +43,15 @@ brew "neovim"
 brew "netcat"
 brew "nmap"
 brew "openssh"
-brew "openssl@3", link: false
 brew "pinentry-mac"
 brew "poppler"
 brew "protobuf"
 brew "pup"
+brew "python@3.10"
 brew "restic"
 brew "ripgrep"
+brew "rust"
+brew "socat"
 brew "starship"
 brew "stow"
 brew "telnet"
@@ -61,17 +60,13 @@ brew "watch"
 brew "wget"
 brew "ykman"
 brew "zsh"
-cask "cutter"
 cask "discord"
 cask "docker"
 cask "font-fira-code"
 cask "gog-galaxy"
 cask "google-chrome"
-cask "imhex"
 cask "iterm2"
-cask "lagrange"
 cask "macfuse"
-cask "marta"
 cask "minecraft"
 cask "monitorcontrol"
 cask "ngrok"
@@ -87,10 +82,10 @@ cask "veracrypt"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
-cask "wireshark"
 mas "Actions", id: 1586435171
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
+mas "Amazing AI", id: 1660147028
 mas "Black Out", id: 1319884285
 mas "DigiDoc4 Client", id: 1370791134
 mas "Exporter", id: 1099120373
@@ -98,6 +93,8 @@ mas "iA Writer", id: 775737590
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
 mas "miele-lxiv", id: 988332475
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
 mas "ProtobufViewer", id: 1165908879
 mas "Slack", id: 803453959
@@ -106,7 +103,6 @@ mas "Telegram", id: 747648890
 mas "Web eID", id: 1576665083
 mas "Yubico Authenticator", id: 1497506650
 vscode "bierner.markdown-mermaid"
-vscode "bungcip.better-toml"
 vscode "casualjim.gotemplate"
 vscode "darkriszty.markdown-table-prettify"
 vscode "dbaeumer.vscode-eslint"
@@ -118,9 +114,7 @@ vscode "GrapeCity.gc-excelviewer"
 vscode "IBM.output-colorizer"
 vscode "jock.svg"
 vscode "matthewpi.caddyfile-support"
-vscode "ms-python.isort"
 vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.hexeditor"
 vscode "redhat.fabric8-analytics"
@@ -128,5 +122,6 @@ vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
 vscode "standard.vscode-standard"
 vscode "streetsidesoftware.code-spell-checker"
+vscode "tamasfe.even-better-toml"
 vscode "yzhang.markdown-all-in-one"
 vscode "zxh404.vscode-proto3"
