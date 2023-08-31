@@ -83,8 +83,8 @@ cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
 mas "Actions", id: 1586435171
-mas "Affinity Designer", id: 824171161
-mas "Affinity Photo", id: 824183456
+mas "Affinity Designer 2", id: 1616831348
+mas "Affinity Photo 2", id: 1616822987
 mas "Amazing AI", id: 1660147028
 mas "Black Out", id: 1319884285
 mas "DigiDoc4 Client", id: 1370791134
