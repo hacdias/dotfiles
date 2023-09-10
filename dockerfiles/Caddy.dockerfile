@@ -1,12 +1,12 @@
-FROM golang:1.20-buster
+FROM golang:1.21-bookworm
 
-ENV CADDY_VERSION v2.6.4
+ENV CADDY_VERSION v2.7.4
 
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest; \
   xcaddy build $CADDY_VERSION --with github.com/caddy-dns/cloudflare; \
   mv caddy /usr/bin/caddy
 
-FROM alpine:3.17
+FROM alpine:3.18
 
 RUN apk add --no-cache ca-certificates mailcap
 
