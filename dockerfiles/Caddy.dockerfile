@@ -1,6 +1,6 @@
 FROM golang:1.21-bookworm
 
-ENV CADDY_VERSION v2.7.4
+ENV CADDY_VERSION v2.7.5
 
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest; \
   xcaddy build $CADDY_VERSION --with github.com/caddy-dns/cloudflare; \
