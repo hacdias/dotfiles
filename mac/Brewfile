@@ -6,7 +6,6 @@ brew "age"
 brew "bat"
 brew "caddy"
 brew "pkg-config"
-brew "python@3.9"
 brew "coreutils"
 brew "deno"
 brew "dnscontrol"
@@ -27,6 +26,7 @@ brew "hugo"
 brew "hunspell"
 brew "hwloc"
 brew "libheif"
+brew "python@3.9"
 brew "libraw"
 brew "imagemagick"
 brew "jhead"
@@ -87,8 +87,10 @@ mas "Affinity Designer 2", id: 1616831348
 mas "Affinity Photo 2", id: 1616822987
 mas "Amazing AI", id: 1660147028
 mas "Black Out", id: 1319884285
+mas "Developer", id: 640199958
 mas "DigiDoc4 Client", id: 1370791134
 mas "Exporter", id: 1099120373
+mas "HiCoffee", id: 1507361706
 mas "iA Writer", id: 775737590
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
@@ -100,7 +102,9 @@ mas "ProtobufViewer", id: 1165908879
 mas "Slack", id: 803453959
 mas "Tailscale", id: 1475387142
 mas "Telegram", id: 747648890
+mas "TestFlight", id: 899247664
 mas "Web eID", id: 1576665083
+mas "Xcode", id: 497799835
 mas "Yubico Authenticator", id: 1497506650
 vscode "bierner.markdown-mermaid"
 vscode "casualjim.gotemplate"
@@ -114,14 +118,17 @@ vscode "GrapeCity.gc-excelviewer"
 vscode "IBM.output-colorizer"
 vscode "jock.svg"
 vscode "matthewpi.caddyfile-support"
+vscode "mechatroner.rainbow-csv"
 vscode "ms-python.python"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.hexeditor"
 vscode "redhat.fabric8-analytics"
+vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
 vscode "standard.vscode-standard"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "tamasfe.even-better-toml"
+vscode "Vue.volar"
 vscode "yzhang.markdown-all-in-one"
 vscode "zxh404.vscode-proto3"
