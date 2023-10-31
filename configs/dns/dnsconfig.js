@@ -32,22 +32,38 @@ D('hacdia.sh', REG_NONE, DnsProvider(CLOUDFLARE),
   A('www', THOR_IP, CF_PROXY_ON),
   A('ipfs', THOR_IP, CF_PROXY_ON),
   A('xkcd', THOR_IP, CF_PROXY_ON),
-  IGNORE_NAME('_dnslink.xkcd')
+  IGNORE_NAME('_dnslink.xkcd'),
+  // Configuration for domains that do not send e-mails
+  TXT('@', 'v=spf1 -all'),
+  TXT('*._domainkey', 'v=DKIM1; p='),
+  TXT('_dmarc', 'v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s')
 )
 
 D('h4c.pt', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
-  A('www', THOR_IP, CF_PROXY_ON)
+  A('www', THOR_IP, CF_PROXY_ON),
+  // Configuration for domains that do not send e-mails
+  TXT('@', 'v=spf1 -all'),
+  TXT('*._domainkey', 'v=DKIM1; p='),
+  TXT('_dmarc', 'v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s')
 )
 
 D('henriquedias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
-  A('www', THOR_IP, CF_PROXY_ON)
+  A('www', THOR_IP, CF_PROXY_ON),
+  // Configuration for domains that do not send e-mails
+  TXT('@', 'v=spf1 -all'),
+  TXT('*._domainkey', 'v=DKIM1; p='),
+  TXT('_dmarc', 'v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s')
 )
 
 D('nata.cafe', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
   A('www', THOR_IP, CF_PROXY_ON),
   A('miniflux', THOR_IP, CF_PROXY_ON),
-  A('linkding', THOR_IP, CF_PROXY_ON)
+  A('linkding', THOR_IP, CF_PROXY_ON),
+  // Configuration for domains that do not send e-mails
+  TXT('@', 'v=spf1 -all'),
+  TXT('*._domainkey', 'v=DKIM1; p='),
+  TXT('_dmarc', 'v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s')
 )
