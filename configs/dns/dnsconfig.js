@@ -57,6 +57,15 @@ D('henriquedias.com', REG_NONE, DnsProvider(CLOUDFLARE),
   TXT('_dmarc', 'v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s')
 )
 
+D('hacdias.dev', REG_NONE, DnsProvider(CLOUDFLARE),
+  A('@', THOR_IP, CF_PROXY_ON),
+  A('www', THOR_IP, CF_PROXY_ON),
+  // Configuration for domains that do not send e-mails
+  TXT('@', 'v=spf1 -all'),
+  TXT('*._domainkey', 'v=DKIM1; p='),
+  TXT('_dmarc', 'v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s')
+)
+
 D('nata.cafe', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
   A('www', THOR_IP, CF_PROXY_ON),
