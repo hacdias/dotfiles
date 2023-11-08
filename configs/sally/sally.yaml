@@ -1,0 +1,15 @@
+url: go.hacdias.com
+
+packages:
+  maze:
+    repo: github.com/hacdias/maze
+    description: Reverse location information.
+  # eagle:
+  #   repo: github.com/hacdias/eagle
+  #   description: My website's blogging platform.
+  # indieauth:
+  #   repo: github.com/hacdias/indieauth
+  #   description: An IndieAuth toolkit in Go.
+  # xkcd-archiver:
+  #   repo: github.com/hacdias/xkcd-archiver
+  #   description: A cloner of the XKCD comics for archiving purposes.

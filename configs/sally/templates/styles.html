@@ -1,0 +1,66 @@
+{{ define "styles" }}
+<style>
+main {
+  max-width: 56rem;
+  margin: 0 auto;
+  width: 95%;
+}
+
+body {
+  color: #212121;
+  background-color: #fbfcfe;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    avenir next, avenir,
+    helvetica, helvetica neue,
+    ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 4rem auto;
+  grid-gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+header svg {
+  height: 3em;
+}
+
+.package {
+  border-bottom: solid 1px #e8edf7;
+  padding: 0.5rem 0;
+}
+
+.package:first-of-type {
+  border-top: solid 1px #e8edf7;
+}
+
+.package > div {
+  display: grid;
+  grid-template-columns: auto 76px 90px;
+  grid-gap: 0.5rem;
+}
+
+.package p {
+  margin: 0 0 0 1rem;
+  font-size: 0.9rem;
+}
+</style>
+{{ end }}
