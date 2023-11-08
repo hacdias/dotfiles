@@ -4,9 +4,9 @@ packages:
   maze:
     repo: github.com/hacdias/maze
     description: Reverse location information.
-  # eagle:
-  #   repo: github.com/hacdias/eagle
-  #   description: My website's blogging platform.
+  eagle:
+    repo: github.com/hacdias/eagle
+    description: My website's blogging platform.
   # indieauth:
   #   repo: github.com/hacdias/indieauth
   #   description: An IndieAuth toolkit in Go.
