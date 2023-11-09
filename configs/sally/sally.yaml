@@ -10,6 +10,9 @@ packages:
   # indieauth:
   #   repo: github.com/hacdias/indieauth
   #   description: An IndieAuth toolkit in Go.
+  micropub:
+    repo: github.com/hacdias/micropub
+    description: A Micropub toolkit in Go.
   xkcd-archiver:
     repo: github.com/hacdias/xkcd-archiver
     description: A cloner of the XKCD comics for archiving purposes.
