@@ -11,32 +11,16 @@ import (
 	"path/filepath"
 	"strconv"
 	"time"
-
-	"github.com/spf13/viper"
 )
 
 type lastFm struct {
-	Key    string
-	User   string
-	Output string
+	*config
 }
 
-func lastFmFromConfig() (*lastFm, error) {
-	viper.SetConfigName("config")
-	viper.AddConfigPath(".")
-
-	err := viper.ReadInConfig()
-	if err != nil {
-		return nil, err
+func newLastFm(c *config) *lastFm {
+	return &lastFm{
+		config: c,
 	}
-
-	conf := &lastFm{}
-	err = viper.Unmarshal(conf)
-	if err != nil {
-		return nil, err
-	}
-
-	return conf, nil
 }
 
 func (l *lastFm) fetchBetween(ctx context.Context, from, to time.Time) error {

@@ -56,11 +56,11 @@ var fetchCmd = &cobra.Command{
 			}
 		}
 
-		fm, err := lastFmFromConfig()
+		c, err := parseConfig()
 		if err != nil {
 			return err
 		}
 
-		return fm.fetchBetween(cmd.Context(), from, to)
+		return newLastFm(c).fetchBetween(cmd.Context(), from, to)
 	},
 }
