@@ -7,12 +7,12 @@ packages:
   eagle:
     repo: github.com/hacdias/eagle
     description: My website's blogging platform.
-  # indieauth:
-  #   repo: github.com/hacdias/indieauth
-  #   description: An IndieAuth toolkit in Go.
+  indieauth:
+    repo: github.com/hacdias/indieauth
+    description: An IndieAuth client and server toolkit for Go.
   micropub:
     repo: github.com/hacdias/micropub
-    description: A Micropub toolkit in Go.
+    description: A Micropub server toolkit in Go.
   xkcd-archiver:
     repo: github.com/hacdias/xkcd-archiver
     description: A cloner of the XKCD comics for archiving purposes.
