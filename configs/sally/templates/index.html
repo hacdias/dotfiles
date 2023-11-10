@@ -18,7 +18,7 @@
       </div>
     </header>
     {{ range .Packages }}
-    <div class='package'>
+    <div class='package' id="pkg-{{ .Name }}">
       <div>
         <strong>{{ .ModulePath }}</strong>
         <div>
