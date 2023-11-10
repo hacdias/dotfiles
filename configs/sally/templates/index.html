@@ -3,10 +3,11 @@
 <head>
   <title>@hacdias Go Packages</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://hacdias.com/favicon.ico" type="image/x-icon">
+  {{ template "normalize" . }}
+  {{ template "styles" . }}
 </head>
-{{ template "styles" . }}
 <body>
   <main>
     <header>
@@ -20,12 +21,14 @@
     <div class='package'>
       <div>
         <strong>{{ .ModulePath }}</strong>
-        <a href="//{{ .RepoURL }}">
-          <img src="//img.shields.io/badge/source-link-green?style=flat-square" alt="Source Code" />
-        </a>
-        <a href="{{ .DocURL }}">
-          <img src="//pkg.go.dev/badge/{{ .ModulePath }}.svg" alt="Package Documentation" />
-        </a>
+        <div>
+          <a href="//{{ .RepoURL }}">
+            <img src="//img.shields.io/badge/source-link-green?style=flat-square" alt="Source Code" />
+          </a>
+          <a href="{{ .DocURL }}">
+            <img src="//pkg.go.dev/badge/{{ .ModulePath }}.svg" alt="Package Documentation" />
+          </a>
+        </div>
       </div>
       {{ with .Desc }}<p>{{ . }}</p>{{ end }}
     </div>

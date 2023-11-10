@@ -20,13 +20,19 @@ body {
 
 a {
   text-decoration: none;
+  color: #00769c;
+}
+
+a:visited {
+  color: #00769c;
 }
 
 header {
   display: grid;
   grid-template-columns: 4rem auto;
   grid-gap: 0.5rem;
-  margin: 2rem 0;
+  align-items: center;
+  margin: 1rem 0;
 }
 
 header h1 {
@@ -54,13 +60,19 @@ header svg {
 
 .package > div {
   display: grid;
-  grid-template-columns: auto 76px 90px;
+  grid-template-columns: auto 11rem;
   grid-gap: 0.5rem;
 }
 
 .package p {
   margin: 0 0 0 1rem;
   font-size: 0.9rem;
+}
+
+@media screen and (max-width: 600px) {
+  .package > div {
+    grid-template-columns: 100%;
+  }
 }
 </style>
 {{ end }}
