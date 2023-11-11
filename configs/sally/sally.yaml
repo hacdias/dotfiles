@@ -9,9 +9,6 @@ packages:
     description: My website's blogging platform.
   indieauth:
     repo: github.com/hacdias/indieauth
-  indiekit:
-    repo: github.com/hacdias/indiekit
-    description: An IndieWeb toolkit in Go.
   indielib:
     repo: github.com/hacdias/indielib
     description: An IndieWeb toolkit in Go.

@@ -17,8 +17,8 @@
         <p>Go packages created and maintained by <a href="https://hacdias.com" rel="noopener noreferrer">@hacdias</a>.</p>
       </div>
     </header>
-    {{ range .Packages }}
-    <div class='package' id="pkg-{{ .Name }}">
+    {{ range .Packages }}{{ if ne .Name "indieauth" }}
+    <div class='package'>
       <div>
         <strong>{{ .ModulePath }}</strong>
         <div>
@@ -32,7 +32,7 @@
       </div>
       {{ with .Desc }}<p>{{ . }}</p>{{ end }}
     </div>
-    {{ end }}
+    {{ end }}{{ end }}
   </main>
 </body>
 </html>
