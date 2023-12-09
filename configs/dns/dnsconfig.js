@@ -73,7 +73,6 @@ D('nata.cafe', REG_NONE, DnsProvider(CLOUDFLARE),
   A('@', THOR_IP, CF_PROXY_ON),
   A('www', THOR_IP, CF_PROXY_ON),
   A('miniflux', THOR_IP, CF_PROXY_ON),
-  A('linkding', THOR_IP, CF_PROXY_ON),
   // Configuration for domains that do not send e-mails
   TXT('@', 'v=spf1 -all'),
   TXT('*._domainkey', 'v=DKIM1; p='),
