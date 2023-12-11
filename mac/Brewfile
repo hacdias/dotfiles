@@ -7,7 +7,6 @@ brew "bat"
 brew "caddy"
 brew "pkg-config"
 brew "coreutils"
-brew "deno"
 brew "dnscontrol"
 brew "exiftool"
 brew "gnutls"
@@ -18,6 +17,7 @@ brew "ffmpeg"
 brew "findutils"
 brew "fzf"
 brew "git"
+brew "git-filter-repo", link: false
 brew "git-lfs"
 brew "gnu-sed"
 brew "gnupg"
@@ -68,7 +68,9 @@ cask "google-chrome"
 cask "iterm2"
 cask "macfuse"
 cask "minecraft"
+cask "mitmproxy"
 cask "monitorcontrol"
+cask "netnewswire"
 cask "ngrok"
 cask "obsidian"
 cask "pdf-expert"
@@ -82,23 +84,27 @@ cask "veracrypt"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
+cask "wireshark"
 mas "Actions", id: 1586435171
 mas "Affinity Designer 2", id: 1616831348
 mas "Affinity Photo 2", id: 1616822987
-mas "Amazing AI", id: 1660147028
 mas "Black Out", id: 1319884285
 mas "Developer", id: 640199958
 mas "DigiDoc4 Client", id: 1370791134
 mas "Exporter", id: 1099120373
 mas "HiCoffee", id: 1507361706
 mas "iA Writer", id: 775737590
+mas "iMovie", id: 408981434
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft Word", id: 462054704
 mas "miele-lxiv", id: 988332475
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
 mas "ProtobufViewer", id: 1165908879
+mas "Refined GitHub", id: 1519867270
 mas "Slack", id: 803453959
 mas "Tailscale", id: 1475387142
 mas "Telegram", id: 747648890
@@ -110,7 +116,6 @@ vscode "bierner.markdown-mermaid"
 vscode "casualjim.gotemplate"
 vscode "darkriszty.markdown-table-prettify"
 vscode "dbaeumer.vscode-eslint"
-vscode "denoland.vscode-deno"
 vscode "eamodio.gitlens"
 vscode "GitHub.github-vscode-theme"
 vscode "golang.go"
@@ -126,7 +131,6 @@ vscode "redhat.fabric8-analytics"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
-vscode "standard.vscode-standard"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "tamasfe.even-better-toml"
 vscode "Vue.volar"
