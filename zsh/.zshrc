@@ -1,6 +1,7 @@
 export LANG="en_US.UTF-8"
 export LC_ALL=${LANG}
 export EDITOR=`which vim`
+export BAT_THEME="Monokai Extended Bright"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # PATH and PATH-like configurations
