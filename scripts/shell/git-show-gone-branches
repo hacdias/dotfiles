@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 # Shows local branches that are gone on the first remote available (usually "origin").
 
 remote=`git remote | head -1`

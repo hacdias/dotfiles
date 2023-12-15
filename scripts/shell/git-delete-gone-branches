@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 # Deletes local branches that are gone on the remote "origin"
 
 remote=`git remote | head -1`
