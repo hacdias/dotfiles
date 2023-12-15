@@ -35,3 +35,4 @@
 	co	 	= checkout
 	com 	= ! git checkout $(git main)
 	rmain	= ! git rebase $(git main)
+	cake  = log --reverse -1 HEAD
