@@ -52,10 +52,6 @@ function o() {
 	fi;
 }
 
-function pins_ls() {
-	ipfs pin remote ls --status=queued,pinning,pinned,failed --service=$1 | sort
-}
-
 function get_dns() {
 	networksetup -getdnsservers Wi-Fi
 }
