@@ -7,8 +7,6 @@ packages:
   eagle:
     repo: github.com/hacdias/eagle
     description: My website's blogging platform.
-  indieauth:
-    repo: github.com/hacdias/indieauth
   indielib:
     repo: github.com/hacdias/indielib
     description: An IndieWeb toolkit in Go.
