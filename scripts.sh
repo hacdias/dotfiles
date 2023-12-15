@@ -11,5 +11,5 @@ for dir in scripts/uno/cmd/*/; do
   cd $dir
   go mod download
   go install
-  cd ../../
+  cd ../../../../
 done
