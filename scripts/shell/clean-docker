@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
-docker system prune -a
-docker container ls
-docker image ls
