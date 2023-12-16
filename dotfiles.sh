@@ -4,7 +4,7 @@ set -euo pipefail
 
 # Wrap around stow to target the user home.
 function stowu () {
-  stow  -t ~ $@
+  stow -t ~ $@
 }
 
 # On new installations, .zshrc should be removed

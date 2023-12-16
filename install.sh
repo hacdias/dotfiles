@@ -24,7 +24,6 @@ fi
 if yn "Install CLIs and App Store apps?"; then
   # Install homebrew packages and GUI apps
   ./brew.sh
-  ./mas.sh
 fi
 
 if yn "Install oh-my-zsh and make zsh the default shell?"; then
