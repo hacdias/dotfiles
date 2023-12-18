@@ -22,6 +22,7 @@ brew "git-lfs"
 brew "gnu-sed"
 brew "gnupg"
 brew "go"
+brew "hcloud"
 brew "hugo"
 brew "hunspell"
 brew "hwloc"
@@ -62,6 +63,7 @@ brew "watch"
 brew "wget"
 brew "ykman"
 brew "zsh"
+cask "1password-cli"
 cask "discord"
 cask "docker"
 cask "font-fira-code"
@@ -99,6 +101,7 @@ mas "iA Writer", id: 775737590
 mas "iMovie", id: 408981434
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
+mas "Mattermost", id: 1614666244
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft Word", id: 462054704
 mas "miele-lxiv", id: 988332475
@@ -126,6 +129,7 @@ vscode "IBM.output-colorizer"
 vscode "jock.svg"
 vscode "matthewpi.caddyfile-support"
 vscode "mechatroner.rainbow-csv"
+vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.python"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.hexeditor"
