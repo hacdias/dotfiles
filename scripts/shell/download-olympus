@@ -10,6 +10,6 @@ set -euo pipefail
 snapshot=$(restic snapshots --latest 1 --json | jq -r .[0].short_id)
 temp_dir=$(mktemp -d)
 restic restore $snapshot --target $temp_dir/backup
-tar cvfz thor-$snapshot.tar.gz -C $temp_dir .
+tar cvfz olympus-$snapshot.tar.gz -C $temp_dir .
 rm -rf $temp_dir
 restic unlock
