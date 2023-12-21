@@ -1,0 +1,3 @@
+[submodule "vim/.vim/pack/tpope/start/sleuth"]
+	path = vim/.vim/pack/tpope/start/sleuth
+	url = https://github.com/tpope/vim-sleuth

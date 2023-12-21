@@ -5,7 +5,7 @@ This repository contains my dotfiles and scripts. Easy to synchronize and setup 
 Quick setup:
 
 ```shell
-$ git clone https://github.com/hacdias/dotfiles
+$ git clone --recurse-submodules https://github.com/hacdias/dotfiles
 $ cd dotfiles
 $ ./install.sh
 $ source ~/.zshrc
