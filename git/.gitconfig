@@ -1,5 +1,5 @@
 [user]
-	email = hacdias@gmail.com
+	email = mail@hacdias.com
 	name = Henrique Dias
 	signingkey = ~/.ssh/ed25519-sk-yubi-676
 
@@ -29,6 +29,12 @@
 
 [push]
 	autoSetupRemote = true
+
+[sendemail]
+	smtpserver = smtp.fastmail.com
+	smtpuser = mail@hacdias.com
+	smtpencryption = ssl
+	smtpserverport = 465
 
 [alias]
 	main 	= ! git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4
