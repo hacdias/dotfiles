@@ -3,25 +3,6 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
-# Define some cd aliases and their completions.
-typeset -A cd_aliases
-cd_aliases=(
-	[cdc]="$HOME/Code"
-	[cdd]="$HOME/Documents"
-)
-
-for k in "${(@k)cd_aliases}"; do
-	function $k() {
-		cd "$cd_aliases[$0]/$1"
-	}
-
-	function _$k() {
-		((CURRENT == 2)) && _files -/ -W $cd_aliases[${0:1}]
-	}
-
-	compdef _$k $k
-done
-
 # Create a data URL from a file
 function dataurl() {
 	local mimeType=$(file -b --mime-type "$1");
