@@ -29,6 +29,7 @@ ZSH_THEME="" # Do not load any zsh theme as I'm using starship!
 plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
+  starship
   hacdias
   git
 )
@@ -37,9 +38,6 @@ setopt HIST_IGNORE_SPACE
 
 [ -f  ${ZSH}/oh-my-zsh.sh ] && source ${ZSH}/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Load Starship https://starship.rs/
-eval "$(starship init zsh)"
 
 # Load up my tokens
 set -a
