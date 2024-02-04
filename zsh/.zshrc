@@ -32,6 +32,8 @@ plugins=(
   starship
   hacdias
   git
+  asdf
+  direnv
 )
 
 setopt HIST_IGNORE_SPACE
