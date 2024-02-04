@@ -2,6 +2,16 @@ alias ll='ls -lh'
 alias la='ls -lAh'
 alias l='ls -CF'
 
+# Normalize `open` across Linux, macOS, and Windows.
+if [ ! $(uname -s) = 'Darwin' ]; then
+	if grep -q Microsoft /proc/version; then
+		# Ubuntu on Windows using the Linux subsystem
+		alias open='explorer.exe';
+	else
+		alias open='xdg-open';
+	fi
+fi
+
 alias open_ports="lsof -Pan -iTCP -sTCP:LISTEN"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ftypes="find . -type f | awk -F'.' '{print \$NF}' | sort| uniq -c | sort -g"
