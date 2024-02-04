@@ -33,6 +33,7 @@ alias jaeger='docker run --rm -it --name jaeger \
 alias tidy_all='gfind -type f -name "go.mod" | while read p; do cd $(dirname $p); echo $p; go mod tidy; cd -; done'
 alias clean_docker='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q) && docker system prune -a && docker container ls && docker image ls'
 alias pretty_csv='mlr --icsv --opprint cat'
+alias reload='source ~/.zshrc'
 
 # Named directories for cd ~{dir}
 hash -d c=$HOME/Code
