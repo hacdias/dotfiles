@@ -46,11 +46,12 @@
 	smtpserverport = 465
 
 [alias]
-	origin 	= ! git remote | head -1
-	main 		= ! git symbolic-ref refs/remotes/$(git origin)/HEAD | cut -d'/' -f4
-	com 		= ! git checkout $(git main)
-	rmain		= ! git rebase $(git main)
-	gone 		= "! git fetch --all --prune; git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
-	co	 		= checkout
-	lease 	= push --force-with-lease
-	cake  	= log --reverse -1 HEAD
+	origin 		= ! git remote | head -1
+	main 			= ! git symbolic-ref refs/remotes/$(git origin)/HEAD | cut -d'/' -f4
+	com 			= ! git checkout $(git main)
+	rmain			= ! git rebase $(git main)
+	gone 			= "! git fetch --all --prune; git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
+	co	 			= checkout
+	lease 		= push --force-with-lease
+	cake  		= log --reverse -1 HEAD
+	uncommit 	= reset --soft HEAD^
