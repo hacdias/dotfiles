@@ -3,8 +3,15 @@
 	name = Henrique Dias
 	signingkey = ~/.ssh/ed25519-sk-yubi-676
 
+[gpg]
+	format = ssh
+
 [commit]
 	gpgsign = true
+
+[tag]
+	gpgsign = true
+	sort = version:refname
 
 [core]
 	excludesfile = ~/.global.gitignore
@@ -18,11 +25,8 @@
 	process = git-lfs filter-process
 	required = true
 
-[gpg]
-	format = ssh
-
 [pull]
-	rebase = false
+	rebase = true
 
 [init]
 	defaultBranch = main
@@ -54,3 +58,7 @@
 	lease 		= push --force-with-lease
 	cake  		= log --reverse -1 HEAD
 	uncommit	= reset --soft HEAD^
+[diff]
+	algorithm = histogram
+[merge]
+	conflictstyle = zdiff3
