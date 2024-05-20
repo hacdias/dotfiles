@@ -29,7 +29,6 @@ brew "git-lfs"
 brew "gnu-sed"
 brew "gnupg"
 brew "go"
-brew "pkg-config"
 brew "hcloud"
 brew "hugo"
 brew "hunspell"
@@ -52,10 +51,12 @@ brew "netcat"
 brew "nmap"
 brew "openssh"
 brew "pinentry-mac"
+brew "pkg-config"
 brew "poppler"
 brew "protobuf"
 brew "pup"
 brew "python@3.10"
+brew "rclone"
 brew "rename"
 brew "restic"
 brew "ripgrep"
@@ -72,23 +73,35 @@ brew "wget"
 brew "ykman"
 brew "zsh"
 cask "1password-cli"
+cask "adobe-acrobat-reader"
+cask "arq"
+cask "calibre"
 cask "discord"
 cask "docker"
+cask "firefox"
 cask "font-fira-code"
 cask "gog-galaxy"
 cask "google-chrome"
+cask "handbrake"
+cask "inkscape"
 cask "iterm2"
+cask "kobo"
 cask "macfuse"
 cask "minecraft"
 cask "monitorcontrol"
 cask "netnewswire"
 cask "obsidian"
+cask "openemu"
 cask "pdf-expert"
 cask "pgadmin4"
+cask "raspberry-pi-imager"
 cask "raycast"
 cask "scroll-reverser"
 cask "spotify"
+cask "textual"
+cask "tor-browser"
 cask "transmission"
+cask "utm"
 cask "veracrypt"
 cask "visual-studio-code"
 cask "vlc"
@@ -98,10 +111,8 @@ mas "Actions", id: 1586435171
 mas "Affinity Designer 2", id: 1616831348
 mas "Affinity Photo 2", id: 1616822987
 mas "Black Out", id: 1319884285
-mas "Developer", id: 640199958
 mas "DigiDoc4 Client", id: 1370791134
 mas "Exporter", id: 1099120373
-mas "HiCoffee", id: 1507361706
 mas "iA Writer", id: 775737590
 mas "iMovie", id: 408981434
 mas "Lungo", id: 1263070803
@@ -112,7 +123,6 @@ mas "Microsoft Word", id: 462054704
 mas "miele-lxiv", id: 988332475
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Parcel", id: 639968404
 mas "ProtobufViewer", id: 1165908879
 mas "Refined GitHub", id: 1519867270
 mas "Slack", id: 803453959
@@ -144,12 +154,14 @@ vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
 vscode "ms-vscode.hexeditor"
 vscode "ms-vscode.remote-explorer"
+vscode "ms-vsliveshare.vsliveshare"
 vscode "platformio.platformio-ide"
 vscode "redhat.fabric8-analytics"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "tamasfe.even-better-toml"
+vscode "tomoki1207.pdf"
 vscode "twxs.cmake"
 vscode "yzhang.markdown-all-in-one"
 vscode "zxh404.vscode-proto3"
