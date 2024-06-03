@@ -37,8 +37,6 @@ brew "jq"
 brew "libfido2"
 brew "libnfc"
 brew "mas"
-brew "mfcuk"
-brew "mfoc"
 brew "miller"
 brew "moreutils"
 brew "neovim"
@@ -82,15 +80,12 @@ cask "macfuse"
 cask "minecraft"
 cask "monitorcontrol"
 cask "netnewswire"
-cask "obsidian"
 cask "openemu"
 cask "pdf-expert"
 cask "pgadmin4"
 cask "raspberry-pi-imager"
-cask "raycast"
 cask "scroll-reverser"
 cask "spotify"
-cask "textual"
 cask "tor-browser"
 cask "transmission"
 cask "utm"
@@ -106,16 +101,12 @@ mas "Black Out", id: 1319884285
 mas "DigiDoc4 Client", id: 1370791134
 mas "Exporter", id: 1099120373
 mas "iA Writer", id: 775737590
-mas "iMovie", id: 408981434
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "miele-lxiv", id: 988332475
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "ProtobufViewer", id: 1165908879
 mas "Refined GitHub", id: 1519867270
 mas "Slack", id: 803453959
 mas "Tailscale", id: 1475387142
