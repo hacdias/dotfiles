@@ -9,15 +9,10 @@ export GOPATH="$HOME/go"
 
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/Library/Python/3.10/bin:$PATH"
 
 # Configure GPG
 export GPG_TTY=$(tty)
-
-# Start GPG over SSH
-# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-# gpgconf --launch gpg-agent
 
 # Start SSH agent
 eval "$(ssh-agent -s)" &>/dev/null
@@ -32,8 +27,6 @@ plugins=(
   starship
   hacdias
   git
-  asdf
-  direnv
 )
 
 setopt HIST_IGNORE_SPACE
