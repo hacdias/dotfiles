@@ -38,5 +38,5 @@ setopt HIST_IGNORE_SPACE
 
 # Load up my tokens
 set -a
-source ~/.tokens
+[ -f ~/.tokens ] && source ~/.tokens
 set +a
