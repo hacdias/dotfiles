@@ -38,10 +38,6 @@ function fdiff() {
 	git diff --name-only --relative --diff-filter=d | xargs bat --diff
 }
 
-function easy_flowfit() {
-	flowfit --calories "$1" --output "$2-$1-kcal.converted.fit" "$2-$1-kcal.fit"
-}
-
 function traceparent() {
 	# see spec: https://www.w3.org/TR/trace-context
 	# version-format   = trace-id "-" parent-id "-" trace-flags
