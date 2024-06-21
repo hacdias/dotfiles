@@ -28,13 +28,13 @@ plugins=(
   starship
   git
   nvm
+  fzf
   hacdias
 )
 
 setopt HIST_IGNORE_SPACE
 
 [ -f  ${ZSH}/oh-my-zsh.sh ] && source ${ZSH}/oh-my-zsh.sh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Load up my tokens
 set -a
