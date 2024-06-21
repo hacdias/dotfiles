@@ -37,4 +37,5 @@ alias reload='source ~/.zshrc'
 
 # Named directories for cd ~{dir}
 hash -d c=$HOME/Code
+hash -d w=$HOME/Code/work
 hash -d d=$HOME/Documents

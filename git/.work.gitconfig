@@ -1,0 +1,3 @@
+[user]
+	email = henrique@ver.id
+	signingkey = ~/.ssh/id_ed25519
