@@ -1,0 +1,88 @@
+{
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "cmake.showOptionsMovedNotification": false,
+  "cSpell.enabled": true,
+  "cSpell.language": "en,nl,pt",
+  "cSpell.userWords": [
+    "hacdias",
+  ],
+  "diffEditor.renderSideBySide": false,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": false,
+  "editor.renderFinalNewline": "dimmed",
+  "editor.rulers": [
+    80
+  ],
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.decorations.badges": false,
+  "files.associations": {
+    "*.as2": "json",
+    "*.tmpl": "html"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true
+  },
+  "files.insertFinalNewline": true,
+  "git.autofetch": true,
+  "git.autoRepositoryDetection": "openEditors",
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.hovers.currentLine.over": "line",
+  "go.toolsManagement.autoUpdate": true,
+  "go.useLanguageServer": true,
+  "hexeditor.columnWidth": 16,
+  "hexeditor.defaultEndianness": "little",
+  "hexeditor.inspectorType": "aside",
+  "hexeditor.showDecodedText": true,
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "markdown.extension.toc.levels": "2..3",
+  "markdown.extension.toc.updateOnSave": false,
+  "outline.problems.badges": false,
+  "python.languageServer": "Pylance",
+  "redhat.telemetry.enabled": true,
+  "svg.preview.mode": "svg",
+  "terminal.integrated.inheritEnv": false,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "workbench.colorCustomizations": {},
+  "workbench.colorTheme": "GitHub Light Default",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": true
+}
