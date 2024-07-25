@@ -35,6 +35,7 @@
     "hacdias",
   ],
   "diffEditor.renderSideBySide": false,
+  "editor.accessibilitySupport": "off",
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.minimap.enabled": false,
