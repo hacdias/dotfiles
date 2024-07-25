@@ -6,10 +6,8 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # PATH and PATH-like configurations
 export GOPATH="$HOME/go"
-
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$HOME/Library/Python/3.10/bin:$PATH"
 
 # Configure GPG
 export GPG_TTY=$(tty)
