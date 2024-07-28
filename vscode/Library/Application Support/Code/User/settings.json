@@ -76,6 +76,8 @@
   "markdown.extension.toc.levels": "2..3",
   "markdown.extension.toc.updateOnSave": false,
   "outline.problems.badges": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": true,
   "svg.preview.mode": "svg",
