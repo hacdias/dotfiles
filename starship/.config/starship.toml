@@ -6,6 +6,9 @@ disabled = true
 [character]
 error_symbol = "[✖](bold red)"
 
+[git_status]
+ignore_submodules = true
+
 # https://starship.rs/presets/no-nerd-font#no-nerd-fonts-preset
 [nodejs]
 symbol = "[⬢](bold green) "
