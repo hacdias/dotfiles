@@ -1,81 +1,85 @@
 {
-  "schemes" : [
+  "$schema": "https:\/\/schema.linearmouse.app\/0.10.0",
+  "schemes": [
     {
-      "if" : {
-        "device" : {
-          "category" : "mouse",
-          "productID" : "0x1b5e",
-          "serialNumber" : "A3FC44B0C00F0C92",
-          "vendorID" : "0x1b1c",
-          "productName" : "CORSAIR HARPOON RGB WIRELESS Gaming Mouse"
-        }
-      },
-      "buttons" : {
-        "universalBackForward" : false,
-        "mappings" : [
+      "buttons": {
+        "mappings": [
           {
-            "command" : false,
-            "shift" : false,
-            "control" : false,
-            "action" : "missionControl",
-            "option" : false,
-            "button" : 2
+            "action": "missionControl",
+            "button": 2,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "button" : 3,
-            "shift" : false,
-            "option" : false,
-            "action" : "mouse.button.forward",
-            "command" : false,
-            "control" : false
+            "action": "mouse.button.forward",
+            "button": 3,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
           },
           {
-            "option" : false,
-            "button" : 4,
-            "action" : "mouse.button.back",
-            "control" : false,
-            "command" : false,
-            "shift" : false
+            "action": "mouse.button.back",
+            "button": 4,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
           }
         ]
       },
-      "pointer" : {
-        "disableAcceleration" : false,
-        "speed" : 0.1,
-        "acceleration" : 0.8
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0x1b5e",
+          "productName": "CORSAIR HARPOON RGB WIRELESS Gaming Mouse",
+          "serialNumber": "A3FC44B0C00F0C92",
+          "vendorID": "0x1b1c"
+        }
       },
-      "scrolling" : {
-        "distance" : {
-          "vertical" : "auto"
-        },
-        "acceleration" : {
-          "vertical" : 1
-        },
-        "reverse" : {
-          "vertical" : true
-        },
-        "speed" : {
-          "vertical" : 0
+      "scrolling": {
+        "reverse": {
+          "vertical": true
         }
       }
     },
     {
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
+      "buttons": {
+        "mappings": [
+          {
+            "action": "mouse.button.back",
+            "button": 3,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
+          },
+          {
+            "action": "mouse.button.forward",
+            "button": 4,
+            "command": false,
+            "control": false,
+            "option": false,
+            "shift": false
+          }
+        ]
+      },
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0xc099",
+          "productName": "G502 X",
+          "serialNumber": "206839585046",
+          "vendorID": "0x46d"
         }
       },
-      "if" : {
-        "device" : {
-          "productName" : "CORSAIR HARPOON RGB WIRELESS Gaming Mouse",
-          "category" : "mouse",
-          "productID" : "0x1b5e",
-          "serialNumber" : "A3FC44B0C00F0C92",
-          "vendorID" : "0x1b1c"
-        },
-        "app" : "com.google.Chrome"
+      "scrolling": {
+        "reverse": {
+          "vertical": true
+        }
       }
     }
-  ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+  ]
 }
