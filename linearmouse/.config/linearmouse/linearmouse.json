@@ -13,7 +13,7 @@
             "shift": false
           },
           {
-            "action": "mouse.button.forward",
+            "action": "mouse.button.back",
             "button": 3,
             "command": false,
             "control": false,
@@ -21,7 +21,7 @@
             "shift": false
           },
           {
-            "action": "mouse.button.back",
+            "action": "mouse.button.forward",
             "button": 4,
             "command": false,
             "control": false,
