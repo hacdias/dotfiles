@@ -75,6 +75,10 @@
           "vendorID": "0x46d"
         }
       },
+      "pointer": {
+        "acceleration": 1,
+        "speed": 0.45
+      },
       "scrolling": {
         "reverse": {
           "vertical": true
