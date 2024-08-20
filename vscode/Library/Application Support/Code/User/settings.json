@@ -36,6 +36,9 @@
   ],
   "diffEditor.renderSideBySide": false,
   "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.minimap.enabled": false,
