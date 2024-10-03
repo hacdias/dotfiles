@@ -1,0 +1,9 @@
+{
+  "Insert UUIDv4": {
+    "prefix": [
+      "uuid"
+    ],
+    "body": "${UUID}",
+    "description": "Insert UUIDv4"
+  }
+}

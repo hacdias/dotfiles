@@ -7,5 +7,14 @@
       "langId": "markdown",
       "name": "Insert Current Date"
     }
+  },
+  {
+    "key": "cmd+u",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "langId": "markdown",
+      "name": "Insert UUIDv4"
+    }
   }
 ]

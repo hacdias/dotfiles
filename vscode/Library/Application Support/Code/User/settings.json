@@ -20,6 +20,9 @@
   "[python]": {
     "editor.formatOnType": true
   },
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -28,12 +31,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
-  "cmake.showOptionsMovedNotification": false,
   "cSpell.enabled": true,
   "cSpell.language": "en,nl,pt",
   "cSpell.userWords": [
     "hacdias",
   ],
+  "cmake.showOptionsMovedNotification": false,
   "diffEditor.renderSideBySide": false,
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
@@ -63,10 +66,11 @@
     "**/.settings": true
   },
   "files.insertFinalNewline": true,
-  "git.autofetch": true,
   "git.autoRepositoryDetection": "openEditors",
+  "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "never",
+  "git.replaceTagsWhenPull": true,
   "gitlens.hovers.currentLine.over": "line",
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
