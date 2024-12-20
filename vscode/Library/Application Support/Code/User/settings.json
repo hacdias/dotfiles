@@ -94,6 +94,7 @@
   "terminal.integrated.inheritEnv": false,
   "typescript.preferences.quoteStyle": "single",
   "typescript.updateImportsOnFileMove.enabled": "never",
+  "window.zoomPerWindow": false,
   "workbench.colorCustomizations": {},
   "workbench.colorTheme": "GitHub Light Default",
   "workbench.startupEditor": "none",
