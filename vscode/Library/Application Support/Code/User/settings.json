@@ -90,7 +90,6 @@
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "python.languageServer": "Pylance",
-  "redhat.telemetry.enabled": true,
   "svg.preview.mode": "svg",
   "terminal.integrated.inheritEnv": false,
   "typescript.preferences.quoteStyle": "single",
