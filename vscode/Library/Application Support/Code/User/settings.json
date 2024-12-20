@@ -57,6 +57,7 @@
   "explorer.decorations.badges": false,
   "files.associations": {
     "*.as2": "json",
+    "*.css": "css",
     "*.tmpl": "html"
   },
   "files.exclude": {
