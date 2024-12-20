@@ -39,6 +39,11 @@
           "vendorID": "0x1b1c"
         }
       },
+      "pointer": {
+        "acceleration": 0.5,
+        "disableAcceleration": true,
+        "speed": 0.0689655172413792768
+      },
       "scrolling": {
         "reverse": {
           "vertical": true
@@ -76,10 +81,57 @@
         }
       },
       "pointer": {
-        "acceleration": 1,
-        "speed": 0.45
+        "acceleration": 0.875,
+        "disableAcceleration": false,
+        "speed": 0.1731
       },
       "scrolling": {
+        "acceleration": {
+          "vertical": 1
+        },
+        "reverse": {
+          "vertical": true
+        }
+      }
+    },
+    {
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0xb020",
+          "productName": "MX Vertical",
+          "serialNumber": "E72DC24346F3D4E8",
+          "vendorID": "0x46d"
+        }
+      },
+      "pointer": {
+        "acceleration": 0.875,
+        "disableAcceleration": false,
+        "speed": 0.0689655172413792768
+      },
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
+        },
+        "reverse": {
+          "vertical": true
+        }
+      }
+    },
+    {
+      "if": {
+        "device": {
+          "category": "mouse",
+          "productID": "0xc08a",
+          "productName": "MX Vertical Advanced Ergonomic Mouse",
+          "serialNumber": "8DD98C855BBEC0D4",
+          "vendorID": "0x46d"
+        }
+      },
+      "scrolling": {
+        "acceleration": {
+          "vertical": 1
+        },
         "reverse": {
           "vertical": true
         }
