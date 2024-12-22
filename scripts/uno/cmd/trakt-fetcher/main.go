@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"time"
+	"uno"
 
 	"github.com/spf13/cobra"
 )
@@ -34,7 +35,7 @@ var rootCmd = &cobra.Command{
 var loginCmd = &cobra.Command{
 	Use: "login",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		c, err := parseConfig()
+		c, err := uno.ParseConfig[config]()
 		if err != nil {
 			return err
 		}
@@ -73,7 +74,7 @@ var fetchCmd = &cobra.Command{
 			}
 		}
 
-		c, err := parseConfig()
+		c, err := uno.ParseConfig[config]()
 		if err != nil {
 			return err
 		}

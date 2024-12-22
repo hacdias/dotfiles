@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"time"
+	"uno"
 
 	"github.com/spf13/cobra"
 )
@@ -55,7 +56,7 @@ var fetchCmd = &cobra.Command{
 			}
 		}
 
-		c, err := parseConfig()
+		c, err := uno.ParseConfig[config]()
 		if err != nil {
 			return err
 		}
