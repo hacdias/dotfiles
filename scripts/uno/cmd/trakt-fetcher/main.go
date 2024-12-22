@@ -24,9 +24,8 @@ func init() {
 }
 
 var rootCmd = &cobra.Command{
-	Use:               "trakt",
+	Use:               "trakt-fetcher",
 	CompletionOptions: cobra.CompletionOptions{DisableDefaultCmd: true},
-	Short:             "Eagle is a website CMS",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return cmd.Help()
 	},
