@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"encoding/json"
-	"errors"
 	"fmt"
 	"net/http"
 	"net/url"
@@ -11,6 +10,7 @@ import (
 	"path/filepath"
 	"strconv"
 	"time"
+	"uno"
 
 	"golang.org/x/oauth2"
 )
@@ -46,44 +46,7 @@ func newTrakt(c *config) (*trakt, error) {
 }
 
 func (t *trakt) interactiveLogin(port int) error {
-	state, err := randomString(10)
-	if err != nil {
-		return nil
-	}
-
-	t.oauth2.RedirectURL = fmt.Sprintf("http://localhost:%d/callback", port)
-
-	url := t.oauth2.AuthCodeURL(state)
-	fmt.Printf("Please open the following URL, authenticate, and close the tab:\n%s\n", url)
-
-	request := make(chan *http.Request, 1)
-
-	server := &http.Server{Addr: ":" + strconv.Itoa(port), Handler: http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		request <- r
-	})}
-
-	go func() {
-		_ = server.ListenAndServe()
-	}()
-	defer func() {
-		_ = server.Shutdown(context.Background())
-	}()
-
-	r := <-request
-
-	if s := r.URL.Query().Get("state"); s != state {
-		return errors.New("state does not match")
-	}
-
-	code := r.URL.Query().Get("code")
-	if code == "" {
-		return errors.New("code was empty")
-	}
-
-	ctx := context.Background()
-	ctx, cancel := context.WithTimeout(ctx, time.Second*30)
-	defer cancel()
-	token, err := t.oauth2.Exchange(ctx, code)
+	token, err := uno.InteractiveLogin(t.oauth2, port)
 	if err != nil {
 		return nil
 	}
