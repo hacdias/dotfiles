@@ -39,13 +39,22 @@ func InteractiveLogin(oauth2 *oauth2.Config, port int) (*oauth2.Token, error) {
 
 	request := make(chan *http.Request, 1)
 
-	server := &http.Server{Addr: ":" + strconv.Itoa(port), Handler: http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+	handler := func(w http.ResponseWriter, r *http.Request) {
 		request <- r
-	})}
+
+		w.Header().Set("Content-Type", "text/html")
+		_, _ = w.Write([]byte(`<!DOCTYPE html><html><head></head><body><h1>Please close this page and go back to the CLI.</h1></body></html>`))
+	}
+
+	server := &http.Server{
+		Addr:    ":" + strconv.Itoa(port),
+		Handler: http.HandlerFunc(handler),
+	}
 
 	go func() {
 		_ = server.ListenAndServe()
 	}()
+
 	defer func() {
 		_ = server.Shutdown(context.Background())
 	}()
