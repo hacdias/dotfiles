@@ -76,7 +76,6 @@ cask "google-chrome"
 cask "handbrake"
 cask "inkscape"
 cask "iterm2"
-cask "kobo"
 cask "linearmouse"
 cask "macfuse"
 cask "minecraft"
@@ -108,7 +107,6 @@ mas "Flighty", id: 1358823008
 mas "iA Writer", id: 775737590
 mas "Kagi for Safari", id: 1622835804
 mas "keymapp", id: 6472865291
-mas "Loxone", id: 1159613409
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
 mas "miele-lxiv", id: 988332475
@@ -117,7 +115,6 @@ mas "Refined GitHub", id: 1519867270
 mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
-mas "Web eID", id: 1576665083
 mas "Xcode", id: 497799835
 mas "Yubico Authenticator", id: 1497506650
 vscode "bierner.markdown-mermaid"
