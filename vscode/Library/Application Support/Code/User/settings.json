@@ -81,11 +81,11 @@
   "files.insertFinalNewline": true,
   "git.autofetch": true,
   "git.autoRepositoryDetection": "openEditors",
+  "git.blame.editorDecoration.enabled": true,
   "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "never",
   "git.replaceTagsWhenPull": true,
   "github.copilot.nextEditSuggestions.enabled": false,
-  "gitlens.hovers.currentLine.over": "line",
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "hexeditor.columnWidth": 16,
@@ -106,7 +106,9 @@
   "typescript.updateImportsOnFileMove.enabled": "never",
   "window.zoomLevel": 0.75,
   "window.zoomPerWindow": false,
-  "workbench.colorCustomizations": {},
+  "workbench.colorCustomizations": {
+    "git.blame.editorDecorationForeground": "#bbbbbb",
+  },
   "workbench.colorTheme": "GitHub Light Default",
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": true
