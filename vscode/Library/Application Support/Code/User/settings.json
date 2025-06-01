@@ -104,7 +104,7 @@
   "terminal.integrated.inheritEnv": false,
   "typescript.preferences.quoteStyle": "single",
   "typescript.updateImportsOnFileMove.enabled": "never",
-  "window.zoomLevel": 0.75,
+  "window.zoomLevel": 0.5,
   "window.zoomPerWindow": false,
   "workbench.colorCustomizations": {
     "git.blame.editorDecorationForeground": "#bbbbbb",
