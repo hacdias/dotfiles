@@ -20,6 +20,9 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
+  "[prisma]": {
+    "editor.formatOnSave": true
+  },
   "[python]": {
     "editor.formatOnType": true
   },
@@ -27,14 +30,13 @@
     "editor.defaultFormatter": "jock.svg"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "biomejs.biome",
     "editor.formatOnSave": true
   },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome",
     "editor.formatOnSave": true
   },
-  "cmake.showOptionsMovedNotification": false,
   "cSpell.enabled": true,
   "cSpell.language": "en,nl,pt",
   "cSpell.userWords": [
@@ -107,7 +109,7 @@
   "window.zoomLevel": 0.5,
   "window.zoomPerWindow": false,
   "workbench.colorCustomizations": {
-    "git.blame.editorDecorationForeground": "#bbbbbb",
+    "git.blame.editorDecorationForeground": "#bbbbbb"
   },
   "workbench.colorTheme": "GitHub Light Default",
   "workbench.startupEditor": "none",
