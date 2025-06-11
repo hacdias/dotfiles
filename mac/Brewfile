@@ -1,8 +1,10 @@
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
+tap "homebrew/cask"
+tap "homebrew/core"
 tap "homebrew/services"
 brew "age"
 brew "bat"
+brew "biome"
 brew "caddy"
 brew "coreutils"
 brew "curl", link: true
@@ -118,6 +120,7 @@ mas "TestFlight", id: 899247664
 mas "Xcode", id: 497799835
 mas "Yubico Authenticator", id: 1497506650
 vscode "bierner.markdown-mermaid"
+vscode "biomejs.biome"
 vscode "bradlc.vscode-tailwindcss"
 vscode "casualjim.gotemplate"
 vscode "dbaeumer.vscode-eslint"
