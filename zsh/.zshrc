@@ -3,11 +3,19 @@ export LC_ALL=${LANG}
 export EDITOR=`which vim`
 export BAT_THEME="Monokai Extended Bright"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export PNPM_HOME="$HOME/Library/pnpm"
 
 # PATH and PATH-like configurations
 export GOPATH="$HOME/go"
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$PNPM_HOME"
+
+# Android Studio
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 # Configure GPG
 export GPG_TTY=$(tty)
