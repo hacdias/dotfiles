@@ -6,10 +6,13 @@ brew "age"
 brew "bat"
 brew "biome"
 brew "caddy"
+brew "cloudflared"
+brew "cocoapods"
 brew "coreutils"
 brew "curl", link: true
 brew "dnscontrol"
 brew "exiftool"
+brew "fail2ban"
 brew "gnutls"
 brew "libass"
 brew "libbluray"
@@ -17,12 +20,14 @@ brew "tesseract"
 brew "ffmpeg"
 brew "findutils"
 brew "fzf"
+brew "gh"
 brew "git"
 brew "git-filter-repo", link: false
 brew "git-lfs"
 brew "gnu-sed"
 brew "gnupg"
 brew "go"
+brew "golangci-lint"
 brew "hcloud"
 brew "htop"
 brew "hugo"
@@ -57,25 +62,30 @@ brew "socat"
 brew "starship"
 brew "stow"
 brew "telnet"
+brew "terraform"
 brew "tmux"
 brew "tor"
 brew "w3m"
 brew "watch"
+brew "watchman"
+brew "webdav"
 brew "wget"
 brew "ykman"
+brew "yt-dlp"
 brew "zsh"
 cask "1password-cli"
 cask "adobe-acrobat-reader"
+cask "android-studio"
 cask "arq"
 cask "calibre"
 cask "discord"
-cask "docker"
+cask "docker-desktop"
 cask "firefox"
 cask "font-fira-code"
 cask "fujifilm-x-raw-studio"
 cask "gog-galaxy"
 cask "google-chrome"
-cask "handbrake"
+cask "handbrake-app"
 cask "inkscape"
 cask "iterm2"
 cask "linearmouse"
@@ -98,25 +108,29 @@ cask "veracrypt"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
+cask "zulu@17"
 mas "1Password for Safari", id: 1569813296
 mas "Actions", id: 1586435171
 mas "Affinity Designer 2", id: 1616831348
 mas "Affinity Photo 2", id: 1616822987
 mas "Black Out", id: 1319884285
+mas "Cyberduck", id: 409222199
+mas "Developer", id: 640199958
 mas "DigiDoc4", id: 1370791134
 mas "Exporter", id: 1099120373
 mas "Flighty", id: 1358823008
 mas "iA Writer", id: 775737590
-mas "Kagi for Safari", id: 1622835804
 mas "keymapp", id: 6472865291
 mas "Lungo", id: 1263070803
 mas "MakePass", id: 1450989464
 mas "miele-lxiv", id: 988332475
+mas "Numbers", id: 409203825
 mas "Pandan", id: 1569600264
 mas "Refined GitHub", id: 1519867270
 mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
+mas "uBlock Origin Lite", id: 6745342698
 mas "Xcode", id: 497799835
 mas "Yubico Authenticator", id: 1497506650
 vscode "bierner.markdown-mermaid"
@@ -142,6 +156,7 @@ vscode "ms-azuretools.vscode-containers"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.cmake-tools"
