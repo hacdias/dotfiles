@@ -75,6 +75,7 @@ brew "yt-dlp"
 brew "zsh"
 cask "1password-cli"
 cask "adobe-acrobat-reader"
+cask "affinity"
 cask "android-studio"
 cask "arq"
 cask "calibre"
@@ -111,8 +112,6 @@ cask "whatsapp"
 cask "zulu@17"
 mas "1Password for Safari", id: 1569813296
 mas "Actions", id: 1586435171
-mas "Affinity Designer 2", id: 1616831348
-mas "Affinity Photo 2", id: 1616822987
 mas "Black Out", id: 1319884285
 mas "Cyberduck", id: 409222199
 mas "Developer", id: 640199958
@@ -131,7 +130,6 @@ mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
 mas "uBlock Origin Lite", id: 6745342698
-mas "Xcode", id: 497799835
 mas "Yubico Authenticator", id: 1497506650
 vscode "bierner.markdown-mermaid"
 vscode "biomejs.biome"
@@ -180,3 +178,8 @@ vscode "vue.volar"
 vscode "yoavbls.pretty-ts-errors"
 vscode "yzhang.markdown-all-in-one"
 vscode "zxh404.vscode-proto3"
+go "golang.org/x/tools/gopls"
+go "uno/cmd/lastfm-fetcher"
+go "honnef.co/go/tools/cmd/staticcheck"
+go "uno/cmd/swarm-fetcher"
+go "uno/cmd/trakt-fetcher"
