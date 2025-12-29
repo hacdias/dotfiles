@@ -1,7 +1,7 @@
 [user]
 	email = mail@hacdias.com
 	name = Henrique Dias
-	signingkey = ~/.ssh/ed25519-sk-yubi-676
+	signingkey = ~/.ssh/ed25519-git
 
 [gpg]
 	format = ssh
