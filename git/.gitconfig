@@ -1,10 +1,13 @@
 [user]
 	email = mail@hacdias.com
 	name = Henrique Dias
-	signingkey = ~/.ssh/ed25519-git
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAMRnajFO+46CD2RrVNQGAfktOUMr43NdYQ2vpF8HHNm
 
 [gpg]
 	format = ssh
+
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 
 [commit]
 	gpgsign = true
@@ -65,6 +68,3 @@
 
 [merge]
 	conflictstyle = zdiff3
-
-[includeIf "gitdir:~/Code/work/"]
-	path = ~/.work.gitconfig
