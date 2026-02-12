@@ -54,17 +54,23 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "chat.viewSessions.orientation": "stacked",
   "cSpell.enabled": true,
   "cSpell.language": "en,nl,pt",
   "cSpell.userWords": [
+    "bluesky",
     "DCQL",
+    "disclosable",
+    "Disclosable",
     "dpop",
+    "fieldsets",
     "hacdias",
     "kubernetes",
     "meilisearch",
     "Meilisearch",
     "micropub",
     "pkce",
+    "reindex",
     "syndicators",
     "Webmentions",
     "yoti"
@@ -92,6 +98,7 @@
   "files.associations": {
     "*.as2": "json",
     "*.css": "css",
+    "*.mdx": "markdown",
     "*.tmpl": "html"
   },
   "files.exclude": {
@@ -116,6 +123,14 @@
   "hexeditor.showDecodedText": true,
   "javascript.preferences.quoteStyle": "single",
   "javascript.updateImportsOnFileMove.enabled": "never",
+  "json.schemaDownload.trustedDomains": {
+    "https://biomejs.dev": true,
+    "https://json-schema.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://www.schemastore.org/": true
+  },
   "markdown.extension.toc.levels": "2..3",
   "markdown.extension.toc.updateOnSave": false,
   "outline.problems.badges": false,
@@ -126,12 +141,14 @@
   "terminal.integrated.inheritEnv": false,
   "typescript.preferences.quoteStyle": "single",
   "typescript.updateImportsOnFileMove.enabled": "never",
+  "window.autoDetectColorScheme": true,
   "window.zoomLevel": 0.5,
   "window.zoomPerWindow": false,
   "workbench.colorCustomizations": {
     "git.blame.editorDecorationForeground": "#bbbbbb"
   },
-  "workbench.colorTheme": "GitHub Light Default",
+  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+  "workbench.preferredLightColorTheme": "GitHub Light Default",
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": true
 }
