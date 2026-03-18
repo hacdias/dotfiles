@@ -55,6 +55,7 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "chat.viewSessions.orientation": "stacked",
+  "claudeCode.preferredLocation": "panel",
   "cSpell.enabled": true,
   "cSpell.language": "en,nl,pt",
   "cSpell.userWords": [
@@ -75,6 +76,7 @@
     "Webmentions",
     "yoti"
   ],
+  "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
@@ -121,8 +123,8 @@
   "hexeditor.defaultEndianness": "little",
   "hexeditor.inspectorType": "aside",
   "hexeditor.showDecodedText": true,
-  "javascript.preferences.quoteStyle": "single",
-  "javascript.updateImportsOnFileMove.enabled": "never",
+  "js/ts.preferences.quoteStyle": "single",
+  "js/ts.updateImportsOnFileMove.enabled": "never",
   "json.schemaDownload.trustedDomains": {
     "https://biomejs.dev": true,
     "https://json-schema.org/": true,
@@ -139,8 +141,6 @@
   "python.languageServer": "Pylance",
   "svg.preview.mode": "svg",
   "terminal.integrated.inheritEnv": false,
-  "typescript.preferences.quoteStyle": "single",
-  "typescript.updateImportsOnFileMove.enabled": "never",
   "window.autoDetectColorScheme": true,
   "window.zoomLevel": 0.5,
   "window.zoomPerWindow": false,
