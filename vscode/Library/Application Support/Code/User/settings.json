@@ -70,6 +70,7 @@
     "meilisearch",
     "Meilisearch",
     "micropub",
+    "paradym",
     "pkce",
     "reindex",
     "syndicators",
@@ -127,10 +128,14 @@
   "js/ts.updateImportsOnFileMove.enabled": "never",
   "json.schemaDownload.trustedDomains": {
     "https://biomejs.dev": true,
+    "https://developer.microsoft.com/json-schemas/": true,
     "https://json-schema.org/": true,
     "https://json.schemastore.org/": true,
     "https://raw.githubusercontent.com/": true,
+    "https://raw.githubusercontent.com/devcontainers/spec/": true,
+    "https://raw.githubusercontent.com/microsoft/vscode/": true,
     "https://schemastore.azurewebsites.net/": true,
+    "https://turborepo.com/schema.v2.json": true,
     "https://www.schemastore.org/": true
   },
   "markdown.extension.toc.levels": "2..3",
