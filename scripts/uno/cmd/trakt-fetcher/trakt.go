@@ -48,13 +48,13 @@ func newTrakt(c *config) (*trakt, error) {
 func (t *trakt) interactiveLogin(port int) error {
 	token, err := uno.InteractiveLogin(t.oauth2, port)
 	if err != nil {
-		return nil
+		return err
 	}
 
 	t.token = token
 	err = t.updateToken()
 	if err != nil {
-		return nil
+		return err
 	}
 
 	fmt.Println("Token updated.")
