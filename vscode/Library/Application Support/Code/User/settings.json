@@ -54,7 +54,9 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "chat.agentSessions.showExternal": "last30Days",
   "chat.viewSessions.orientation": "stacked",
+  "claudeCode.hideOnboarding": true,
   "claudeCode.preferredLocation": "panel",
   "cSpell.enabled": true,
   "cSpell.language": "en,nl,pt",
@@ -130,13 +132,7 @@
     "https://biomejs.dev": true,
     "https://developer.microsoft.com/json-schemas/": true,
     "https://json-schema.org/": true,
-    "https://json.schemastore.org/": true,
-    "https://raw.githubusercontent.com/": true,
-    "https://raw.githubusercontent.com/devcontainers/spec/": true,
-    "https://raw.githubusercontent.com/microsoft/vscode/": true,
-    "https://schemastore.azurewebsites.net/": true,
-    "https://turborepo.com/schema.v2.json": true,
-    "https://www.schemastore.org/": true
+    "https://turborepo.com/schema.v2.json": true
   },
   "markdown.extension.toc.levels": "2..3",
   "markdown.extension.toc.updateOnSave": false,
@@ -144,6 +140,7 @@
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "python.languageServer": "Pylance",
+  "sessions.diffEditor.wordWrap": "on",
   "svg.preview.mode": "svg",
   "terminal.integrated.inheritEnv": false,
   "window.autoDetectColorScheme": true,
