@@ -11,12 +11,6 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$PNPM_HOME"
 
-# Android Studio
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
-
 # Configure GPG
 export GPG_TTY=$(tty)
 
