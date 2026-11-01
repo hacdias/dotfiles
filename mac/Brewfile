@@ -25,6 +25,7 @@ brew "gh"
 brew "git"
 brew "git-filter-repo", link: false
 brew "git-lfs"
+brew "gitleaks"
 brew "gnu-sed"
 brew "gnutls"
 brew "gnupg"
@@ -89,7 +90,6 @@ cask "calibre"
 cask "claude"
 cask "claude-code"
 cask "cleanshot"
-cask "cursor"
 cask "discord"
 cask "docker-desktop"
 cask "firefox"
@@ -137,6 +137,7 @@ mas "MakePass", id: 1450989464
 mas "miele-lxiv", id: 988332475
 mas "Numbers", id: 409203825
 mas "Pandan", id: 1569600264
+mas "Parcel", id: 375589283
 mas "Refined GitHub", id: 1519867270
 mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
@@ -181,7 +182,6 @@ vscode "streetsidesoftware.code-spell-checker-dutch"
 vscode "streetsidesoftware.code-spell-checker-portuguese"
 vscode "tamasfe.even-better-toml"
 vscode "tomoki1207.pdf"
-vscode "twxs.cmake"
 vscode "vue.volar"
 vscode "yoavbls.pretty-ts-errors"
 vscode "yzhang.markdown-all-in-one"
@@ -189,3 +189,4 @@ go "golang.org/x/tools/gopls"
 go "uno/cmd/lastfm-fetcher"
 go "uno/cmd/swarm-fetcher"
 go "uno/cmd/trakt-fetcher"
+npm "corepack"
