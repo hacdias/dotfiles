@@ -14,9 +14,6 @@ export PATH="$PATH:$PNPM_HOME"
 # Configure GPG
 export GPG_TTY=$(tty)
 
-# Start SSH agent
-eval "$(ssh-agent -s)" &>/dev/null
-
 # Configure Oh My Zsh https://ohmyz.sh/
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="" # Do not load any zsh theme as I'm using starship!
