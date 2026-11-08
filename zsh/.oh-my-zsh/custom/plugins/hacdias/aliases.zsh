@@ -21,6 +21,7 @@ alias clean_docker='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -
 alias clean_caches='go clean -modcache && brew cleanup && pnpm store prune && clean_docker'
 alias pretty_csv='mlr --icsv --opprint cat'
 alias reload='source ~/.zshrc'
+alias brew_dump='brew bundle dump --force --no-describe'
 
 # Named directories for cd ~{dir}
 hash -d c=$HOME/Code
