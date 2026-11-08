@@ -20,14 +20,12 @@ eval "$(ssh-agent -s)" &>/dev/null
 # Configure Oh My Zsh https://ohmyz.sh/
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="" # Do not load any zsh theme as I'm using starship!
-zstyle ':omz:plugins:nvm' lazy yes
 
 plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   starship
   git
-  nvm
   fzf
   hacdias
 )

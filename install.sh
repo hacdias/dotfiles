@@ -41,6 +41,6 @@ if yn "Install other tools and scripts?"; then
   ./scripts.sh
 fi
 
-if yn "Install node and nvm?"; then
+if yn "Install node and fnm?"; then
   ./node.sh
 fi
