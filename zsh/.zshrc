@@ -11,6 +11,9 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$PNPM_HOME"
 
+# Node version manager https://github.com/Schniz/fnm
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 # Configure GPG
 export GPG_TTY=$(tty)
 
