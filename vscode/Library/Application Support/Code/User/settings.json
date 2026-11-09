@@ -13,9 +13,6 @@
     },
     "editor.tabSize": 2
   },
-  "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
@@ -44,11 +41,11 @@
     "editor.defaultFormatter": "jock.svg"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   "[yaml]": {
@@ -62,21 +59,20 @@
   "cSpell.language": "en,nl,pt",
   "cSpell.userWords": [
     "bluesky",
-    "DCQL",
+    "dcql",
     "disclosable",
-    "Disclosable",
     "dpop",
     "fieldsets",
     "hacdias",
     "kubernetes",
     "meilisearch",
-    "Meilisearch",
     "micropub",
+    "omitzero",
     "paradym",
     "pkce",
     "reindex",
     "syndicators",
-    "Webmentions",
+    "webmentions",
     "yoti"
   ],
   "diffEditor.ignoreTrimWhitespace": false,
@@ -106,12 +102,6 @@
     "*.mdx": "markdown",
     "*.tmpl": "html"
   },
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.factorypath": true,
-    "**/.project": true,
-    "**/.settings": true
-  },
   "files.insertFinalNewline": true,
   "git.autofetch": true,
   "git.autoRepositoryDetection": "openEditors",
@@ -139,7 +129,6 @@
   "outline.problems.badges": false,
   "prettier.semi": false,
   "prettier.singleQuote": true,
-  "python.languageServer": "Pylance",
   "sessions.diffEditor.wordWrap": "on",
   "svg.preview.mode": "svg",
   "terminal.integrated.inheritEnv": false,
