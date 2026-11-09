@@ -51,6 +51,7 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "biome.requireConfiguration": true,
   "chat.agentSessions.showExternal": "last30Days",
   "chat.viewSessions.orientation": "stacked",
   "claudeCode.hideOnboarding": true,
