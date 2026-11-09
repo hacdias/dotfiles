@@ -8,7 +8,7 @@ Quick setup:
 $ git clone --recurse-submodules https://github.com/hacdias/dotfiles
 $ cd dotfiles
 $ ./install.sh
-$ source ~/.zshrc
+$ exec zsh -l
 ```
 
 Most likely some error might've just occurred. I will try to fix it.

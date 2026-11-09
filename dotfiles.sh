@@ -7,9 +7,9 @@ function stowu () {
   stow -t ~ $@
 }
 
-# On new installations, .zshrc should be removed
+# On new installations, .zshrc and .zprofile should be removed
 # otherwise stow will complain.
-rm -rf ~/.zshrc
+rm -rf ~/.zshrc ~/.zprofile
 
 # Make sure the tokens file exists.
 touch ~/.tokens
@@ -22,5 +22,7 @@ stowu vim
 stowu zsh
 stowu vscode
 stowu linearmouse
+stowu claude
+stowu rex
 
-echo "Please run:\n\tsource ~/.zshrc"
+echo "Please run:\n\texec zsh -l"
