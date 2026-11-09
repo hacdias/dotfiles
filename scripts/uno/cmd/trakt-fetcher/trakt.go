@@ -3,11 +3,11 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"net/http"
 	"net/url"
 	"os"
-	"path/filepath"
 	"strconv"
 	"time"
 	"uno"
@@ -25,11 +25,12 @@ func newTrakt(c *config) (*trakt, error) {
 	t := &trakt{
 		config: c,
 		oauth2: &oauth2.Config{
-			ClientID:     c.Client,
-			ClientSecret: c.Secret,
+			// No client secret: login uses PKCE.
+			ClientID: c.Client,
 			Endpoint: oauth2.Endpoint{
-				AuthURL:  "https://trakt.tv/oauth/authorize",
-				TokenURL: "https://trakt.tv/oauth/token",
+				AuthURL:   "https://auth.trakt.tv/oauth/authorize",
+				TokenURL:  "https://auth.trakt.tv/oauth/token",
+				AuthStyle: oauth2.AuthStyleInParams,
 			},
 		},
 	}
@@ -61,7 +62,7 @@ func (t *trakt) interactiveLogin(port int) error {
 	return nil
 }
 
-func (t *trakt) fetch(ctx context.Context, page int, start time.Time, end time.Time) (traktHistory, bool, error) {
+func (t *trakt) fetch(ctx context.Context, client *http.Client, page int, start time.Time, end time.Time) (traktHistory, bool, error) {
 	limit := 100
 	u, err := url.Parse("https://api.trakt.tv/sync/history")
 	if err != nil {
@@ -91,19 +92,21 @@ func (t *trakt) fetch(ctx context.Context, page int, start time.Time, end time.T
 		return nil, false, err
 	}
 
-	t.oauth2.Client(ctx, t.token)
-
-	httpClient := t.oauth2.Client(ctx, t.token)
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Accept", "application/json")
+	req.Header.Set("User-Agent", "trakt-fetcher")
 	req.Header.Set("trakt-api-key", t.config.Client)
 	req.Header.Set("trakt-api-version", "2")
 
-	res, err := httpClient.Do(req)
+	res, err := client.Do(req)
 	if err != nil {
 		return nil, false, err
 	}
 	defer res.Body.Close()
+
+	if res.StatusCode != http.StatusOK {
+		return nil, false, fmt.Errorf("response status is %s", res.Status)
+	}
 
 	currentPage, err := strconv.Atoi(res.Header.Get("X-Pagination-Page"))
 	if err != nil {
@@ -126,6 +129,10 @@ func (t *trakt) fetch(ctx context.Context, page int, start time.Time, end time.T
 }
 
 func (t *trakt) fetchBetween(ctx context.Context, start, end time.Time) error {
+	if t.token == nil {
+		return errors.New("token is not set")
+	}
+
 	var (
 		err         error
 		page        = 1
@@ -134,8 +141,22 @@ func (t *trakt) fetchBetween(ctx context.Context, start, end time.Time) error {
 		hasMore     = true
 	)
 
+	// Refresh tokens are single-use: save a refreshed token before anything else
+	// can fail, and use a static token so nothing refreshes without being saved.
+	t.token, err = t.oauth2.TokenSource(ctx, t.token).Token()
+	if err != nil {
+		return err
+	}
+
+	err = t.updateToken()
+	if err != nil {
+		return err
+	}
+
+	client := oauth2.NewClient(ctx, oauth2.StaticTokenSource(t.token))
+
 	for hasMore {
-		historyPage, hasMore, err = t.fetch(ctx, page, start, end)
+		historyPage, hasMore, err = t.fetch(ctx, client, page, start, end)
 		if err != nil {
 			return err
 		}
@@ -145,60 +166,15 @@ func (t *trakt) fetchBetween(ctx context.Context, start, end time.Time) error {
 		page++
 	}
 
-	err = t.saveHistory(history)
-	if err != nil {
-		return err
-	}
-
-	return t.updateToken()
-}
-
-func (t *trakt) saveHistory(history traktHistory) error {
 	history.sort()
-
-	if len(history) == 0 {
-		return nil
-	}
-
-	h := map[int]map[time.Month]traktHistory{}
-
-	for i := range history {
-		year := history[i].WatchedAt.Year()
-		month := history[i].WatchedAt.Month()
-
-		if _, ok := h[year]; !ok {
-			h[year] = map[time.Month]traktHistory{}
-		}
-
-		if _, ok := h[year][month]; !ok {
-			h[year][month] = traktHistory{}
-		}
-
-		h[year][month] = append(h[year][month], history[i])
-	}
-
-	for year := range h {
-		for month := range h[year] {
-			bytes, err := json.MarshalIndent(h[year][month], "", "\t")
-			if err != nil {
-				return err
-			}
-
-			err = os.WriteFile(filepath.Join(t.config.Output, fmt.Sprintf("%04d-%02d.json", year, month)), bytes, 0644)
-			if err != nil {
-				return err
-			}
-		}
-	}
-
-	return nil
+	return uno.SaveByMonth(t.config.Output, history, func(i traktHistoryItem) time.Time { return i.WatchedAt })
 }
 
 func (t *trakt) updateToken() error {
 	raw, err := json.MarshalIndent(t.token, "", "  ")
 	if err != nil {
-		return nil
+		return err
 	}
 
-	return os.WriteFile(t.config.Token, raw, 0644)
+	return os.WriteFile(t.config.Token, raw, 0600)
 }

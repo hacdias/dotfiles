@@ -2,15 +2,13 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"encoding/xml"
 	"fmt"
 	"net/http"
 	"net/url"
-	"os"
-	"path/filepath"
 	"strconv"
 	"time"
+	"uno"
 )
 
 type lastFm struct {
@@ -32,7 +30,7 @@ func (l *lastFm) fetchBetween(ctx context.Context, from, to time.Time) error {
 	page := 1
 
 	for {
-		res, err := l.recentTracks(ctx, page, from.Unix(), to.Unix())
+		res, err := l.recentTracks(ctx, page, from, to)
 		if err != nil {
 			return err
 		}
@@ -56,49 +54,10 @@ func (l *lastFm) fetchBetween(ctx context.Context, from, to time.Time) error {
 		}
 	}
 
-	return l.saveHistory(tracks)
+	return uno.SaveByMonth(l.Output, tracks, func(t *Track) time.Time { return t.Date })
 }
 
-func (l *lastFm) saveHistory(history []*Track) error {
-	if len(history) == 0 {
-		return nil
-	}
-
-	h := map[int]map[time.Month][]*Track{}
-
-	for i := range history {
-		year := history[i].Date.UTC().Year()
-		month := history[i].Date.UTC().Month()
-
-		if _, ok := h[year]; !ok {
-			h[year] = map[time.Month][]*Track{}
-		}
-
-		if _, ok := h[year][month]; !ok {
-			h[year][month] = []*Track{}
-		}
-
-		h[year][month] = append(h[year][month], history[i])
-	}
-
-	for year := range h {
-		for month := range h[year] {
-			bytes, err := json.MarshalIndent(h[year][month], "", "\t")
-			if err != nil {
-				return err
-			}
-
-			err = os.WriteFile(filepath.Join(l.Output, fmt.Sprintf("%04d-%02d.json", year, month)), bytes, 0644)
-			if err != nil {
-				return err
-			}
-		}
-	}
-
-	return nil
-}
-
-func (l *lastFm) recentTracks(ctx context.Context, page int, from, to int64) (*tracks, error) {
+func (l *lastFm) recentTracks(ctx context.Context, page int, from, to time.Time) (*tracks, error) {
 	limit := 200
 	u, err := url.Parse("https://ws.audioscrobbler.com/2.0/")
 	if err != nil {
@@ -112,12 +71,12 @@ func (l *lastFm) recentTracks(ctx context.Context, page int, from, to int64) (*t
 	q.Set("page", strconv.Itoa(page))
 	q.Set("api_key", l.Key)
 
-	if from != 0 {
-		q.Set("from", strconv.FormatInt(from, 10))
+	if !from.IsZero() {
+		q.Set("from", strconv.FormatInt(from.Unix(), 10))
 	}
 
-	if to != 0 {
-		q.Set("to", strconv.FormatInt(to, 10))
+	if !to.IsZero() {
+		q.Set("to", strconv.FormatInt(to.Unix(), 10))
 	}
 
 	u.RawQuery = q.Encode()
@@ -135,6 +94,10 @@ func (l *lastFm) recentTracks(ctx context.Context, page int, from, to int64) (*t
 		return nil, err
 	}
 	defer res.Body.Close()
+
+	if res.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("response status is %s", res.Status)
+	}
 
 	var response *recentTracksResponse
 	err = xml.NewDecoder(res.Body).Decode(&response)

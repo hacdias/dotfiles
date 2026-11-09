@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"time"
 	"uno"
 
 	"github.com/spf13/cobra"
@@ -19,8 +18,7 @@ func main() {
 func init() {
 	rootCmd.AddCommand(fetchCmd)
 
-	fetchCmd.Flags().StringP("from", "f", "", "Start date to start fetching (YYYY-MM).")
-	fetchCmd.Flags().StringP("to", "t", "", "End date to start fetching (YYYY-MM, not included).")
+	uno.AddMonthFlags(fetchCmd)
 }
 
 var rootCmd = &cobra.Command{
@@ -34,26 +32,9 @@ var rootCmd = &cobra.Command{
 var fetchCmd = &cobra.Command{
 	Use: "fetch",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		fromStr, _ := cmd.Flags().GetString("from")
-		toStr, _ := cmd.Flags().GetString("to")
-
-		var (
-			err      error
-			from, to time.Time
-		)
-
-		if fromStr != "" {
-			from, err = time.ParseInLocation("2006-01", fromStr, time.UTC)
-			if err != nil {
-				return err
-			}
-		}
-
-		if toStr != "" {
-			to, err = time.ParseInLocation("2006-01", toStr, time.UTC)
-			if err != nil {
-				return err
-			}
+		from, to, err := uno.MonthFlags(cmd)
+		if err != nil {
+			return err
 		}
 
 		c, err := uno.ParseConfig[config]()

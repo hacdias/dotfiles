@@ -8,7 +8,6 @@ import (
 	"net/http"
 	"net/url"
 	"os"
-	"path/filepath"
 	"strconv"
 	"time"
 	"uno"
@@ -49,13 +48,13 @@ func newSwarm(c *config) (*swarm, error) {
 func (t *swarm) interactiveLogin(port int) error {
 	token, err := uno.InteractiveLogin(t.oauth2, port)
 	if err != nil {
-		return nil
+		return err
 	}
 
 	t.token = token
 	err = t.updateToken()
 	if err != nil {
-		return nil
+		return err
 	}
 
 	fmt.Println("Token updated.")
@@ -143,7 +142,8 @@ func (t *swarm) fetchBetween(ctx context.Context, start, end time.Time) error {
 		page++
 	}
 
-	err = t.saveHistory(checkins)
+	checkins.sort()
+	err = uno.SaveByMonth(t.config.Output, checkins, swarmCheckin.CreatedAt)
 	if err != nil {
 		return err
 	}
@@ -151,52 +151,11 @@ func (t *swarm) fetchBetween(ctx context.Context, start, end time.Time) error {
 	return t.updateToken()
 }
 
-func (t *swarm) saveHistory(history swarmCheckins) error {
-	history.sort()
-
-	if len(history) == 0 {
-		return nil
-	}
-
-	h := map[int]map[time.Month]swarmCheckins{}
-
-	for i := range history {
-		year := history[i].CreatedAt().Year()
-		month := history[i].CreatedAt().Month()
-
-		if _, ok := h[year]; !ok {
-			h[year] = map[time.Month]swarmCheckins{}
-		}
-
-		if _, ok := h[year][month]; !ok {
-			h[year][month] = swarmCheckins{}
-		}
-
-		h[year][month] = append(h[year][month], history[i])
-	}
-
-	for year := range h {
-		for month := range h[year] {
-			bytes, err := json.MarshalIndent(h[year][month], "", "\t")
-			if err != nil {
-				return err
-			}
-
-			err = os.WriteFile(filepath.Join(t.config.Output, fmt.Sprintf("%04d-%02d.json", year, month)), bytes, 0644)
-			if err != nil {
-				return err
-			}
-		}
-	}
-
-	return nil
-}
-
 func (t *swarm) updateToken() error {
 	raw, err := json.MarshalIndent(t.token, "", "  ")
 	if err != nil {
-		return nil
+		return err
 	}
 
-	return os.WriteFile(t.config.Token, raw, 0644)
+	return os.WriteFile(t.config.Token, raw, 0600)
 }

@@ -19,7 +19,6 @@ type Track struct {
 	Artist        Artist    `json:"artist"`
 	Album         Album     `json:"album"`
 	OriginalImage string    `json:"originalImage,omitempty"`
-	Image         string    `json:"image,omitempty"`
 	Date          time.Time `json:"date"`
 }
 
@@ -63,12 +62,6 @@ type date struct {
 
 func (l date) convert() time.Time {
 	return time.Unix(l.UTS, 0)
-}
-
-type Tag struct {
-	XMLName xml.Name `xml:"tag"`
-	Name    string   `xml:"name"`
-	URL     string   `xml:"url"`
 }
 
 type track struct {

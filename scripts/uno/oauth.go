@@ -2,10 +2,10 @@ package uno
 
 import (
 	"context"
-	"encoding/hex"
+	"crypto/rand"
 	"errors"
 	"fmt"
-	"math/rand"
+	"net"
 	"net/http"
 	"strconv"
 	"time"
@@ -13,28 +13,17 @@ import (
 	"golang.org/x/oauth2"
 )
 
-var seededRand *rand.Rand = rand.New(rand.NewSource(time.Now().UnixNano()))
-
-func randomString(length int) (string, error) {
-	b := make([]byte, length)
-
-	_, err := seededRand.Read(b)
-	if err != nil {
-		return "", err
-	}
-
-	return hex.EncodeToString(b), nil
-}
-
-func InteractiveLogin(oauth2 *oauth2.Config, port int) (*oauth2.Token, error) {
-	state, err := randomString(10)
+func InteractiveLogin(config *oauth2.Config, port int) (*oauth2.Token, error) {
+	ln, err := net.Listen("tcp", "localhost:"+strconv.Itoa(port))
 	if err != nil {
 		return nil, err
 	}
 
-	oauth2.RedirectURL = fmt.Sprintf("http://localhost:%d/callback", port)
+	state := rand.Text()
+	verifier := oauth2.GenerateVerifier()
+	config.RedirectURL = fmt.Sprintf("http://localhost:%d/callback", port)
 
-	url := oauth2.AuthCodeURL(state)
+	url := config.AuthCodeURL(state, oauth2.S256ChallengeOption(verifier))
 	fmt.Printf("Please open the following URL, authenticate, and close the tab:\n%s\n", url)
 
 	request := make(chan *http.Request, 1)
@@ -47,12 +36,11 @@ func InteractiveLogin(oauth2 *oauth2.Config, port int) (*oauth2.Token, error) {
 	}
 
 	server := &http.Server{
-		Addr:    ":" + strconv.Itoa(port),
 		Handler: http.HandlerFunc(handler),
 	}
 
 	go func() {
-		_ = server.ListenAndServe()
+		_ = server.Serve(ln)
 	}()
 
 	defer func() {
@@ -74,5 +62,5 @@ func InteractiveLogin(oauth2 *oauth2.Config, port int) (*oauth2.Token, error) {
 	ctx, cancel := context.WithTimeout(ctx, time.Second*30)
 	defer cancel()
 
-	return oauth2.Exchange(ctx, code)
+	return config.Exchange(ctx, code, oauth2.VerifierOption(verifier))
 }
