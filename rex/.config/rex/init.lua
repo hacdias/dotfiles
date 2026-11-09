@@ -1,0 +1,5 @@
+-- From iTerm2 GlobalKeyMap (~/Library/Preferences/com.googlecode.iterm2.plist)
+rex.bind("cmd+left", "pane.focus_previous")
+rex.bind("cmd+right", "pane.focus_next")
+rex.bind("shift+cmd+left", "client.tab.move", { direction = "backward" })
+rex.bind("shift+cmd+right", "client.tab.move", { direction = "forward" })
