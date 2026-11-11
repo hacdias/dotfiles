@@ -1,0 +1,5 @@
+theme_light = "catppuccin-latte"
+theme_dark = "catppuccin-mocha"
+# Homebrew handles updates
+no_update_check = true
+comment_vim = true
