@@ -17,7 +17,9 @@
     ]
   },
   "enabledPlugins": {
-    "ponytail@ponytail": true
+    "ponytail@ponytail": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "ponytail": {
@@ -36,8 +38,8 @@
       "effortLevel": "xhigh"
     }
   },
+  "tui": "fullscreen",
   "theme": "auto",
   "remoteControlAtStartup": false,
-  "agentPushNotifEnabled": true,
-  "tui": "fullscreen"
+  "agentPushNotifEnabled": true
 }
