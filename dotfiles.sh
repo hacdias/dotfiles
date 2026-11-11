@@ -18,7 +18,7 @@ touch ~/.tokens
 stowu git
 stowu gpg
 stowu starship
-stowu vim
+stowu nvim
 stowu zsh
 stowu vscode
 stowu linearmouse
