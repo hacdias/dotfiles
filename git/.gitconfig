@@ -18,6 +18,13 @@
 
 [core]
 	excludesfile = ~/.global.gitignore
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
 
 [credential]
 	helper = osxkeychain

@@ -16,6 +16,7 @@ brew "fnm"
 brew "fzf"
 brew "gh"
 brew "git"
+brew "git-delta"
 brew "git-filter-repo", link: false
 brew "git-lfs"
 brew "gitleaks"
