@@ -1,6 +1,7 @@
 alias ll='ls -lh'
 alias la='ls -lAh'
 alias l='ls -CF'
+alias cat='bat -pp'
 
 # Normalize `open` across Linux, macOS, and Windows.
 if [ ! $(uname -s) = 'Darwin' ]; then
